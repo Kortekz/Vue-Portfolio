@@ -1,0 +1,7 @@
+{
+    "data" : [
+        {
+            "navbar": ["Home", "About", "Projects", "Resume", "Testimonials", "Contact"]
+        }
+    ]
+}
