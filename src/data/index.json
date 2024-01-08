@@ -2,6 +2,10 @@
     "data" : [
         {
             "navbar": ["Home", "About", "Projects", "Resume", "Testimonials", "Contact"]
+        },
+        {
+            "About": "About",
+            "Content": "My Name is Corné and I am an aspiring Full Stack Web Developer"
         }
     ]
 }

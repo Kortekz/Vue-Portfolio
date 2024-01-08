@@ -3,7 +3,7 @@
   <nav>
     <!-- Navbar links -->
     <!-- Logo -->
-    <li></li>
+   <li> </li>
    <li> <router-link to="/">Home</router-link> </li>  
    <li> <router-link to="/about">About</router-link> </li>
    <li> <router-link to="/projects">Projects</router-link> </li>
@@ -23,11 +23,12 @@
   text-align: center;
   color: #2c3e50;
 }
+
 nav {
  display: flex;
  justify-content: flex-end;
  background-color: transparent;
- padding: 1rem;
+ padding: 1rem; 
  text-decoration: none;
 }
 
@@ -41,7 +42,7 @@ nav li {
 nav a {
  text-decoration: none;
  color: #343a40;
- font-size: 23px;
+ font-size: 20px;
 }
 
 nav a.router-link-exact-active {
