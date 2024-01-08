@@ -4,4 +4,10 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
+
+let head=document.head;
+let link=document.createElement('link')
+link.rel="stylesheet"
+link.href='https://fonts.googleapis.com/css?family=Gantari'
+head.appendChild(link)
 createApp(App).use(store).use(router).mount('#app')

@@ -13,19 +13,7 @@
    
    <script>
    export default {
-    name: "Navbar",
-    data: function () {
-      return {
-        navbars: [
-          { names: "Home", router: "/" },
-          { names: "About", router: "/About" },
-          { names: "Projects", router: "/Projects" },
-          { names: "Resume", router: "/Resume" },
-          { names: "Testimonials", router: "/Testimonials" },
-          { names: "Contact", router: "/Contact" }
-        ]
-      }
-    }
+  
    }
    </script>
    
