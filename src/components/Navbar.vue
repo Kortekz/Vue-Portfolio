@@ -2,7 +2,8 @@
   <nav class="navbar navbar-expand-lg">
     <!-- Logo -->
     <router-link to="/" class="navbar-brand">
-      <img class="image1" src="https://drive.google.com/uc?id=1-R1hrbgfzGA4zIx0jor5jQd5XBwCSmbl" alt="">
+      <img class="image1" src="https://drive.google.com/uc?id=1qXBjBDS3IvUwW9guLmbeqpPXgJ4dCOJB" alt="">
+
     </router-link>
 
     <!-- Updated Navbar Toggler for mobile -->
@@ -80,7 +81,7 @@ nav a::after {
  height: 2px;
  bottom: 0;
  left: 0;
- background-color: #3244ff;
+ background-color: #005ae2;
  transform: scaleX(0);
  transform-origin: bottom right;
  transition: transform 0.25s ease-out;
@@ -92,10 +93,10 @@ nav a.nav-link-underline:hover::after {
 }
 
 nav a.router-link-exact-active {
- color: #3244ff !important;
+ color: #005ae2 !important;
 }
 nav a:hover {
- color: #3244ff !important;
+ color: #005ae2 !important;
  transition: transform color 0.3s ease;
 }
 .image1{
