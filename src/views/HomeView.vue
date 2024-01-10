@@ -9,7 +9,7 @@
           <h3 class="title">{{ person.title }}</h3>
           <p class="HomeP">{{ person.description }}</p>
         </div>
-        <div class="image-container">
+        <div class="image-container1">
           <img class="Me" :src="person.image" alt="Cover Image">
         </div>
       </div>
@@ -47,7 +47,7 @@ export default {
   margin-bottom: 20px;
   width: 100%;
 }
-.image-container {
+.image-container1 {
   flex: 1;
 }
 .content {

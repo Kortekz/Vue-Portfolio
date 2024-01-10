@@ -66,7 +66,7 @@ export default {
 }
 .image-container {
   width: 100%;
-  height: 250px; /* Set a fixed height for the images */
+  height: 300px; /* Set a fixed height for the images */
   overflow: hidden;
   padding: 20px;
   margin-bottom: 20px;
