@@ -4,8 +4,6 @@ const dataAPI =  'https://kortekz.github.io/vueData/'
 export default createStore({
   state: {
     home: [],
-    education: [],
-    about: [],
     skills: [],
     testimonials: [],
     projects: []
@@ -16,8 +14,10 @@ export default createStore({
     setHome(state, value) { 
     state.home = value 
     },
+    
   },
   actions: {
+    // Getting home data
     async fetchHome(context) {
       try {
         let res = await fetch(dataAPI);
@@ -27,5 +27,6 @@ export default createStore({
         console.error('Error fetching home data:', error);
       }
     },
+    
   },
 })
