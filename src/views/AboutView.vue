@@ -11,7 +11,7 @@ My commitment to learning and improving my skills makes me a valuable asset to a
 </p>
 
 <div class="imgAb">
-  <img class="Me2" src="https://drive.google.com/uc?id=1knAAB9s8HY9jnZzJz3IOpjO3IQdzpjlf" alt="">
+  <img class="Me2" src="https://i.imgur.com/6etI8os.jpg" alt="">
 </div>
 
   </div>

@@ -111,17 +111,19 @@ margin-top: -240px;
 }
 h3{
 padding-bottom: 20px;
+font-size: 20px;
 }
 /* CONTACT ICONS */ /* CONTACT ICONS */ /* CONTACT ICONS */ /* CONTACT ICONS */
 .fab {
-padding: 20px;
-font-size: 28px;
-width: 70px;
+padding: 15px;
+font-size: 20px;
+width: 50px;
 text-align: center;
 text-decoration: none;
 border-radius: 10px;
 margin-right: 30px;
-transition: 0.5s;
+margin-left: 30px;
+transition: 0.3s;
 }
 .fa-facebook:hover{
 color: white;
@@ -159,7 +161,7 @@ padding-bottom: 20px;
 .contact-git {
 padding: 15px;
 background: #005ae2;
-font-size: 20px;
+font-size: 15px;
 color: white;
 font-weight: 500;
 text-decoration: none;
@@ -167,7 +169,7 @@ border-radius: 10px;
 border: none;
 text-decoration: none; 
 transition: 0.5s;
-margin-right: 20px;
+margin-right: 0px;
 }
 .contact-git:hover {
 background-color: transparent;
@@ -271,8 +273,9 @@ background-color: #cccccc;
 border: 2px solid #005ae2;
 transition: 0.3s ease;
 color: #005ae2;
-font-weight: 600;
+box-shadow: 0 0 20px #005ae2; 
 }
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
 .icons{

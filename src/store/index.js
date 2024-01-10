@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-const dataAPI =  'https://kortekz.github.io/vueData/'
+const dataAPI = 'https://kortekz.github.io/vueData/' 
 
 export default createStore({
   state: {

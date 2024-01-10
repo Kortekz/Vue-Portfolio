@@ -4,6 +4,7 @@
   <div class="container">
     <div v-if="home && home.length > 0">
       <div v-for="person in home" :key="person.Name" class="content-wrapper">
+        
         <div class="content">
           <h2 class="name">{{ person.Name }}</h2>
           <h3 class="title">{{ person.title }}</h3>
@@ -49,6 +50,11 @@ export default {
 }
 .image-container1 {
   flex: 1;
+  position: relative;
+  display: inline-block;
+  animation: borderAnimation 2s infinite; 
+  border-radius: 5px;
+  overflow: hidden;
 }
 .content {
   flex: 1;
@@ -73,7 +79,12 @@ export default {
   height: auto;
   border: 4px solid rgb(79, 78, 78);
   border-radius: 5px;
+    /* Apply animation to the image border */
+    animation: borderAndBoxShadowAnimation 2s infinite;
+  position: relative;
+  overflow: hidden;
 }
+
 /* Media query for tablet and mobile devices */
 @media (max-width: 768px) {
   .content-wrapper {
@@ -84,4 +95,21 @@ export default {
     margin-bottom: 20px; /* Add margin between image and content on mobile */
   }
 }
+
+/* Define the animation for the border and box shadow */
+@keyframes borderAndBoxShadowAnimation {
+  0% {
+    border-color: rgb(79, 78, 78);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    border-color: #00c3ff;
+    box-shadow: 0 0 20px #00c3ff;
+  }
+  100% {
+    border-color: rgb(79, 78, 78);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  }
+}
+
 </style>
