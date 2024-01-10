@@ -14,7 +14,7 @@
       <!-- Testimonial container for cards -->
       <div class="testimonial-container">
 
-        <div v-for="(info, index) in testimonials.slice(1)" :key="info.name" class="card">
+        <div v-for="info in testimonials.slice(1)" :key="info.name" class="card">
          
           <div class="image-container">
           <img class="testimonialImage" :src="info.profile" alt="Cover Image">

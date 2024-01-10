@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg">
     <!-- Logo -->
     <router-link to="/" class="navbar-brand">
-      <img class="image1" src="https://drive.google.com/uc?id=1qXBjBDS3IvUwW9guLmbeqpPXgJ4dCOJB" alt="">
+      <img class="image1" src="https://i.imgur.com/nhQVdDv.png" alt="">
 
     </router-link>
 
