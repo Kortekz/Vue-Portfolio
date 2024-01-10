@@ -66,8 +66,8 @@ export default {
 .HomeP{
   color: white;
   padding-top: 20px;
+  font-size: 18px;
 }
-
 .Me {
   max-width: 60%; /* Adjust image size */
   height: auto;
@@ -84,5 +84,4 @@ export default {
     margin-bottom: 20px; /* Add margin between image and content on mobile */
   }
 }
-
 </style>
