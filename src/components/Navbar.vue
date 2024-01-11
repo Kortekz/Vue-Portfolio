@@ -91,7 +91,6 @@ nav a.nav-link-underline:hover::after {
  transform: scaleX(1);
  transform-origin: bottom left;
 }
-
 nav a.router-link-exact-active {
  color: #005ae2 !important;
 }
@@ -100,8 +99,8 @@ nav a:hover {
  transition: transform color 0.3s ease;
 }
 .image1{
-  width: 100px;
-  height: 110px;
+  width: 95px;
+  height: 100px;
   padding: 15px;
   margin-left: 20px;
 }

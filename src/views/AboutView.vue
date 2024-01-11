@@ -22,7 +22,10 @@ My commitment to learning and improving my skills makes me a valuable asset to a
 </script>
 
 <style>
-
+.about{
+  margin-left: 40px;
+  margin-right: 40px;
+}
 .aboutH1{
 color: #005ae2;
 padding-bottom: 20px;
@@ -34,7 +37,6 @@ padding-bottom: 20px;
   margin-right: 40px;
 }
 .imgAb{
-
 padding-bottom: 100px;
 }
 .Me2{
@@ -42,5 +44,14 @@ padding-bottom: 100px;
   height: auto;
   border: 4px solid rgb(79, 78, 78);
 }
-
+@media (max-width: 768px) {
+  .fontP{
+    font-size: 12px;
+  }
+}
+@media (max-width: 300px) {
+  .fontP{
+    font-size: 10px;
+  }
+}
 </style>
