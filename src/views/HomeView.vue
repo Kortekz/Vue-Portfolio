@@ -100,7 +100,7 @@ export default {
 .HomeP{
   color: white;
   padding-top: 20px;
-  font-size: 18px;
+  font-size: 20px;
   margin-right: 50px;
 }
 .Me {

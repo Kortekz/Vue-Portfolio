@@ -116,13 +116,13 @@ font-size: 20px;
 /* CONTACT ICONS */ /* CONTACT ICONS */ /* CONTACT ICONS */ /* CONTACT ICONS */
 .fab {
 padding: 15px;
-font-size: 20px;
-width: 50px;
+font-size: 25px;
+width: 55px;
 text-align: center;
 text-decoration: none;
 border-radius: 10px;
-margin-right: 30px;
-margin-left: 30px;
+margin-right: 15px;
+margin-left: 15px;
 transition: 0.3s;
 }
 .fa-facebook:hover{

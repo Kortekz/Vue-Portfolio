@@ -54,7 +54,7 @@ export default {
   color: white;
   font-size: 20px;
   padding-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 /* Card styles */
 .testimonial-container {
