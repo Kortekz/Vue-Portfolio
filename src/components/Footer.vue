@@ -28,10 +28,14 @@
   bottom: 0;
   width: 100%;
 }
-
 /* Center the content within the footer */
 footer p {
   margin: 0;
+}
+@media (max-width: 768px) {
+  footer p{
+    font-size: 14px;
+  }
 }
 
   </style>

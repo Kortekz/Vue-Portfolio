@@ -81,7 +81,7 @@ export default {
   margin: 40px 0px;
   border: 2px solid transparent !important;
   padding: 15px;
-  border-radius: 25px;
+  border-radius: 25px !important;
   overflow: hidden;
   background-color: transparent !important;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
