@@ -167,7 +167,7 @@ margin-left: -10px;
 .contact-git {
 padding: 15px;
 background: #005ae2;
-font-size: 15px;
+font-size: 18px;
 color: white;
 font-weight: 500;
 text-decoration: none;
