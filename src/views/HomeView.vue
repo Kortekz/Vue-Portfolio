@@ -104,12 +104,12 @@ export default {
   margin-right: 50px;
 }
 .Me {
-  max-width: 65%; /* Adjust image size */
+  max-width: 65%; 
   height: auto;
   border: 4px solid rgb(79, 78, 78);
   border-radius: 20px;
-    /* Apply animation to the image border */
-    animation: borderAndBoxShadowAnimation 2s infinite;
+  /* Apply animation to the image border */
+  animation: borderAndBoxShadowAnimation 2s infinite;
   position: relative;
   overflow: hidden;
 }
@@ -187,28 +187,38 @@ transition: 0.5s;
 
 /* Media query for tablet and mobile devices */
 @media (max-width: 768px) {
-  .content-wrapper {
-    flex-direction: column;
+.content-wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+.Me {
+  width: 100%; /* Adjust image size for mobile */
+  margin-bottom: 20px; /* Add margin between image and content on mobile */
+  margin-left: -45px;
   }
-  .Me {
-    width: 100%; /* Adjust image size for mobile */
-    margin-bottom: 20px; /* Add margin between image and content on mobile */
-  }
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-left: 20px;
+ }
 }
 
 /* Define the animation for the border and box shadow */
 @keyframes borderAndBoxShadowAnimation {
-  0% {
-    border-color: rgb(79, 78, 78);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+0% {
+  border-color: rgb(79, 78, 78);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
-  50% {
-    border-color: #00c3ff;
-    box-shadow: 0 0 20px #00c3ff;
+50% {
+  border-color: #00c3ff;
+  box-shadow: 0 0 20px #00c3ff;
   }
-  100% {
-    border-color: rgb(79, 78, 78);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+100% {
+  border-color: rgb(79, 78, 78);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   }
 }
 

@@ -60,7 +60,7 @@ export default {
   margin: 40px;
   border: 2px solid transparent !important;
   padding: 25px !important;
-  /* border-radius: 25px; */
+  border-radius: 25px;
   overflow: hidden;
   background-color: transparent !important;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
@@ -72,10 +72,11 @@ export default {
   transform: scale(1.05);
 }
 .card img {
-  width: 65%;
-  height: 220px; /* Set a fixed height for the images */
+  width: 100%;
+  height: 260px; /* Set a fixed height for the images */
   object-fit: cover; /* Ensure images fill the container while maintaining aspect ratio */
   margin-bottom: 10px;
+  border-radius: 25px;
 }
 .cards {
   text-align: center;

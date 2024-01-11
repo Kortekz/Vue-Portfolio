@@ -135,4 +135,18 @@ nav a:hover {
 .navbar-toggler .line:nth-child(3) {
   transform-origin: left center;
 }
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+    text-align: center;
+  }
+  nav ul {
+    width: 100%;
+    padding: 0;
+  }
+  nav li {
+    padding: 10px;
+  }
+}
+
 </style>
