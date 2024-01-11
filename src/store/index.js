@@ -16,7 +16,10 @@ export default createStore({
     },
     setTestimonials(state, value) { 
       state.testimonials = value 
-      },
+    },
+    setProjects(state, value) { 
+     state.projects = value 
+    },
     
   },
   actions: {
@@ -39,6 +42,14 @@ export default createStore({
         console.error('Error fetching Testimonials data:', error);
       }
     },
-    
+    async fetchProjects(context) {
+      try {
+        let res = await fetch(dataAPI);
+        let { projects } = await res.json();
+        context.commit('setProjects', projects);
+      } catch (error) {
+        console.error('Error fetching Project data:', error);
+      }
+    },
   },
 })

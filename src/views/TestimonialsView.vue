@@ -62,11 +62,11 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
-  max-width: 1200px; /* Adjust as needed */
+  max-width: 1400px; /* Adjust as needed */
 }
 .image-container {
   width: 100%;
-  height: 300px; /* Set a fixed height for the images */
+  height: 250px; /* Set a fixed height for the images */
   overflow: hidden;
   padding: 20px;
   margin-bottom: 20px;
@@ -77,14 +77,20 @@ export default {
   object-fit: cover; /* Ensure images fill the container while maintaining aspect ratio */
 }
 .card {
-  width: calc(33.33% - 20px); 
-  margin: 20px 0;
-  border: 2px solid white !important;
-  padding: 20px;
-  border-radius: 8px;
+  width: calc(33.33% - 80px); 
+  margin: 40px 0px;
+  border: 2px solid transparent !important;
+  padding: 15px;
+  border-radius: 25px;
   overflow: hidden;
   background-color: transparent !important;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+}
+.card:hover{
+  box-shadow: 0 0 20px rgb(0, 90, 226, 0.8);
+  transition: 0.5s;
+  transform: scale(1.05); 
 }
 .card img {
   width: 100%;
@@ -93,6 +99,7 @@ export default {
 }
 .card-content {
   text-align: center;
+  padding: 20px;
 }
 .name {
   font-weight: bold;
@@ -109,18 +116,49 @@ export default {
 }
 @media screen and (max-width: 768px) {
   .card {
-  width: calc(40% - 20px); /* For smaller screens, two cards in a row */
-  margin-left: 20px;
-  margin-right: 20px;
+    width: calc(40% - 20px); /* For smaller screens, two cards in a row */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .image-container {
+    height: 100px; /* Adjust the height of the image container */
+    margin-bottom: 10px; /* Adjust the margin between the image container and card content */
+  }
+  .testimonialImage {
+    max-height: 100%; /* Ensure images fill the container vertically */
   }
   .card-content {
     font-size: 8px; /* Adjust font size for smaller screens */
   }
   .card img {
-    min-width: 100px; /* Set a minimum width for the image */
-    max-width: 80%; /* Set a maximum width to ensure responsiveness */
+    max-width: 100%; /* Set a maximum width to ensure responsiveness */
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 0; /* Remove margin below the images */
   }
 }
+
+@media screen and (max-width: 300px) {
+  .testimonial-container {
+    justify-content: center;
+  }
+  .card {
+    width: calc(80% - 20px); /* Adjust the width for smaller screens */
+    margin: 20px 0px;
+  }
+  .image-container {
+    height: 120px; /* Adjust the height of the image container */
+  }
+  .testimonialImage {
+    max-height: 100%; /* Ensure images fill the container vertically */
+  }
+  .card-content {
+    font-size: 10px; /* Adjust font size for smaller screens */
+  }
+  .card img {
+    max-width: 100%; /* Set a maximum width to ensure responsiveness */
+    height: auto;
+    margin-bottom: 0; /* Remove margin below the images */
+  }
+}
+
 </style>
