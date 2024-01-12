@@ -60,7 +60,7 @@
             <textarea name="message" required data-Message></textarea>
           </label>
 
-          <button type="submit" class="sendBtn" data-sendBtn>Send</button>
+          <button type="submit" class="sendBtn" value="Send" data-sendBtn>Send</button>
         </form>
       </div>
     
@@ -68,7 +68,36 @@
 </template>
 
 <script>
+ export default {
+  mounted() {
+    // Call the initializeForm method when the component is mounted
+    this.initializeForm();
+  },
+  methods: {
+    initializeForm() {
+  // declaring the button that will be used to send the data to form spree
+  let sendButton = document.querySelector("[data-sendBtn]");
+  
+  // Check if the sendButton is not null before adding the event listener
  
+    // calling the sending button and adding an event listener to the button that, when clicked, has a setTimeout attached to it
+    sendButton.addEventListener("click", () => {
+      // the set timeout is set to 1 second and within the setTimeout, we are calling the clearTheForm method
+      setTimeout(this.clearTheForm, 1000);
+    });
+  
+},
+    clearTheForm() {
+      // setting all the values to blank, this will reset the values
+      document.querySelector("[data-Message]").value = "";
+      document.querySelector("[data-First]").value = "";
+      document.querySelector("[data-Email]").value = "";
+      document.querySelector("[data-Surname]").value = "";
+      document.querySelector("[data-Contact]").value = "";
+    },
+  },
+};
+
 </script>
 
 <style scoped>
