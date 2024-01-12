@@ -10,7 +10,8 @@ export default createStore({
     education: [],
     workExperience: [],
     image:[],
-    contact:[]
+    contact:[],
+    download:[]
   },
   getters: {
   },
@@ -38,6 +39,9 @@ export default createStore({
     },
     setContact(state, value) { 
       state.contact = value 
+    },
+    setCDownload(state, value) { 
+      state.download = value 
     },
   },
   actions: {
@@ -119,6 +123,16 @@ export default createStore({
         context.commit('setContact', contact);
       } catch (error) {
         console.error('Error fetching Work contact data:', error);
+      }
+    },
+    // getting download data, for the resume
+    async fetchDownload(context) {
+      try {
+        let res = await fetch(dataAPI);
+        let { download } = await res.json();
+        context.commit('setDownload', download);
+      } catch (error) {
+        console.error('Error fetching Work download data:', error);
       }
     },
   },

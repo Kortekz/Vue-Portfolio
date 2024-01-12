@@ -39,10 +39,14 @@ padding-bottom: 20px;
 .imgAb{
 padding-bottom: 100px;
 }
-.Me2{
-  max-width: 40%; 
+.Me2 {
+  max-width: 40%;
   height: auto;
   border: 4px solid rgb(79, 78, 78);
+  position: relative;
+  overflow: hidden;
+  /* Define the animation for the border and box shadow */
+  animation: borderAndBoxShadowAnimation 2s infinite;
 }
 /* Responsiveness */
 @media (max-width: 768px) {
@@ -61,6 +65,21 @@ padding-bottom: 100px;
 @media (max-width: 300px) {
   .fontP {
     font-size: 12px;
+  }
+}
+/* Define the animation for the border and box shadow */
+@keyframes borderAndBoxShadowAnimation {
+0% {
+  border-color: rgb(79, 78, 78);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+50% {
+  border-color: #00c3ff;
+  box-shadow: 0 0 20px #00c3ff;
+  }
+100% {
+  border-color: rgb(79, 78, 78);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   }
 }
 </style>
