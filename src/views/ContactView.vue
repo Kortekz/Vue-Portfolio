@@ -82,6 +82,7 @@ padding-bottom: 50px;
 font-size: 20px;
 padding-bottom: 20px;
 }
+
 .extra {
 display: flex;
 justify-content: left;
@@ -279,7 +280,7 @@ box-shadow: 0 0 20px #005ae2;
 /* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
 .icons{
-font-size: 20px;
+font-size: 18px;
 padding-bottom: 5px;
 }
 .contact {
@@ -291,11 +292,11 @@ align-items: center;
 }
 .contact-info,
 .contact-info2 {
-width: 80%; /* Adjust width for contact info on smaller screens */
-margin-left: auto; /* Remove left margin */
-margin-right: auto; /* Center align */
+width: 80%; 
+margin-left: auto; 
+margin-right: auto; 
 text-align: center;
-margin-bottom: 0px; /* Adjust margin for contact info */
+margin-bottom: 0px; 
 padding-top: 50px;
 }
 .contact-info2 {
@@ -303,7 +304,7 @@ margin-top: 2px;
 margin-bottom: 50px;
 }
 .form-container {
-width: 80%; /* Adjust width for form on smaller screens */
+width: 85%; 
 margin: 0 auto;
 padding: 20px; 
 padding-bottom: 80px;
@@ -313,10 +314,10 @@ padding-bottom: 80px;
 .form-container input[type="tel"],
 .form-container input[type="email"],
 .form-container textarea {
-font-size: 14px; /* Adjust font size for inputs */
+font-size: 14px; 
 }
 .form-container .sendBtn {
-width: 100%; /* Adjust button width */
+width: 100%; 
 }
 }
 

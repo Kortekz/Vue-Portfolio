@@ -111,6 +111,7 @@ export default createStore({
         console.error('Error fetching Work image data:', error);
       }
     },
+    // getting contact data
     async fetchContact(context) {
       try {
         let res = await fetch(dataAPI);

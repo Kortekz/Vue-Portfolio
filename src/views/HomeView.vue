@@ -1,6 +1,7 @@
 
 
 <template>
+  
   <div class="container">
     <div v-if="home && home.length > 0">
       <div v-for="person in home" :key="person.Name" class="content-wrapper">
@@ -37,9 +38,11 @@
         </div>
       </div>
     </div>
-    <div v-else>
-      <p>No information available.</p>
+
+    <div v-else class="spinny">
+      <div class="spinner-border"></div>
     </div>
+    
   </div>
 </template>
 
@@ -57,6 +60,18 @@ export default {
 </script>
 
 <style scoped>
+.spinny {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 600px;
+  margin-top: 200px;
+}
+.spinner-border {
+  color: white;
+  text-align: center;
+}
 .container {
   display: flex;
   justify-content: flex-start;

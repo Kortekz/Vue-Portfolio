@@ -2,8 +2,15 @@
 
 <template>
 
+
+<div>
+
+  <!-- putting all if's in one dive to make it easier to display the spinner -->
+  <div v-if="education && education.length && workExperience && workExperience.length && skills && skills.length> 0" >
+    
   
-<div class="banner">
+<!-- Banner Section -->
+  <div class="banner">
       <div class="banner-content">
         <div class="circle">
           <img :src="corneImage" alt="Your Image">
@@ -21,7 +28,8 @@
         <h2>Education</h2>
         <div v-for="eduItem in education" :key="eduItem.id" class="edu-item">
           <h3>{{ eduItem.year }}</h3>
-          <p class="edu-type">{{ eduItem.type }}: {{ eduItem.description }}</p>
+          <p class="edu-type">{{ eduItem.type }} : </p>
+          <p class="edu-des">{{ eduItem.description }}</p> 
           <p class="edu-place">Place: {{ eduItem.place }}</p>
         </div>
       </div>
@@ -31,25 +39,28 @@
         <h2>Work Experience</h2>
         <div v-for="workItem in workExperience" :key="workItem.year" class="exp-item">
           <h3>{{ workItem.year }}</h3>
-          <p class="exp-occupation">{{ workItem.occupation }}: {{ workItem.description }}</p>
+          <p class="exp-occupation">{{ workItem.occupation }} : </p>
+          <p class="exp-des"> {{ workItem.description }} </p> 
         </div>
       </div>
 
       <!-- Contact Section -->
       <div class="section contact">
         <h2>Contact</h2>
-        <div class="contact-item">
-          <p class="contact-info">
-            <i class="fas fa-map-marker-alt"></i> {{ contact.address }}
+        <div class="contact-item" v-if="contact">
+          <p class="contact-info" v-if="contact.address">
+            <i class="fas fa-map-marker-alt"></i> <p class="addy">{{ contact.address }} </p>
           </p>
-          <p class="contact-info">
-            <i class="fas fa-phone"></i> {{ contact.phone }}
+          <p class="contact-info" v-if="contact.phone">
+            <i class="fas fa-phone"></i> <p class="phone"> {{ contact.phone }}</p>
           </p>
-          <p class="contact-info">
-            <i class="fas fa-envelope"></i> {{ contact.email }}
+          <p class="contact-info" v-if="contact.email">
+            <i class="fas fa-envelope"></i> <p class="email"> {{ contact.email }}</p>
           </p>
         </div>
       </div>
+
+
 
     
       <!-- Skills Section -->
@@ -65,7 +76,17 @@
 
     </div>
 
+    </div>
+
   </div>
+
+  <div v-else class="spinny">
+      <div class="spinner-border"></div>
+    </div>
+
+
+</div>
+
 
 
 </template>
@@ -100,15 +121,26 @@ export default {
 </script>
 
 <style scoped>
-
+.spinny {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 300px; */
+  margin-top: 200px;
+}
+.spinner-border {
+  color: white;
+  text-align: center;
+}
 /* BANNER STYLES */
 .banner {
-  background-color: #005ae2; /* Blue color for the banner */
+  background-color: #005ae2;
   height: 140px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .banner-content {
   text-align: center;
@@ -121,11 +153,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 4px solid #005ae2;;
+  border: 8px solid #005ae2;
 }
 .circle img {
-  width: 200px; /* Adjust the size of the image */
-  height: 250px;
+  width: 200px; 
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -136,17 +168,17 @@ export default {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  flex-wrap: wrap; 
   justify-content: space-between;
   padding-top: 40px;
 }
 
 /* SECTION STYLES */
 .section {
-  width: 30%; /* Adjust the width as needed */
-  margin-bottom: 0px; /* Adjust margin as needed */
+  width: 30%; 
+  margin-bottom: 0px; 
 }
-.edu-item, .exp-item, .contact-item {
+.edu-item, .exp-item {
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -154,11 +186,16 @@ export default {
   text-align: left;
   font-size: 15px;
 }
+.contact-item{
+  margin-left: 100px;
+  padding-top: 5px;
+}
 
-/* SKILLS SECTION STYLES... */
+/* SKILLS SECTION STYLES */
 .skills {
-  width: 75%; /* Adjust the width to take full width */
-  margin: 0 auto; /* Center the skills section */
+  width: 75%; 
+  margin: 0 auto; 
+  padding-top: 40px;
 }
 .skills-container {
   display: flex;
@@ -168,7 +205,7 @@ export default {
   margin-bottom: 80px;
 }
 .skill-card {
-  width: 48%; /* Adjust the width based on your preference */
+  width: 48%; 
   box-sizing: border-box;
   padding: 20px;
   border-radius: 10px;
@@ -188,9 +225,10 @@ export default {
 h2 {
   color: white;
   font-size: 24px;
+  padding-bottom: 20px;
 }
 h3 {
-  font-size: 18px;
+  font-size: 22px !important;
 }
 .skillh2{
   padding-bottom: 40px;
@@ -198,29 +236,37 @@ h3 {
 .skill-experience {
   font-size: 14px;
 }
-
 h2 {
   color: white;
   font-size: 24px;
 }
-
 h3 {
   font-size: 18px;
 }
 .skill-experience{
   font-size: 14px;
 }
-
-.edu-type, .edu-place, .exp-occupation, .skill-experience, .contact-info {
+.edu-type, .edu-place, .edu-des, .exp-des, .exp-occupation, .skill-experience, .contact-info {
   margin: 5px 0;
   color: white;
   font-size: 18px;
 }
-/* Add FontAwesome icons styling */
+.edu-type{
+  font-weight: 800 !important;
+  color: #3385ff;
+  font-size: 20px;
+}
+.exp-occupation{
+  font-weight: 600 !important;
+  color: #3385ff;
+  font-size: 20px;
+}
+/* icons styling */
 .contact-info i {
   margin-right: 5px;
+  color: #3385ff;
 }
-/* Contact Section STYLES... */
+/* Contact Section STYLES */
 .contact {
   width: 30%;
   margin-bottom: 0px;
@@ -233,16 +279,107 @@ h3 {
   font-size: 18px;
 }
 .contact-info i {
-  margin-right: 10px; /* Adjust the space between icon and text */
-  font-size: 24px; /* Adjust the icon size */
+  margin-right: 50px; 
+  font-size: 24px;
+}
+.addy{
+  padding: 10px;
+  padding-top: 30px;
+}
+.phone{
+  padding-top: 15px;
+}
+.email{
+  padding-top: 15px;
 }
 .main-container {
   max-width: 2000px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; /* Align children vertically */
-  align-items: center; /* Center content horizontally */
+  flex-direction: column; 
+  align-items: center; 
   padding-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 786px) {
+.resume {
+  flex-direction: column;
+}
+.section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.banner {
+  height: 100px;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+}
+.circle img {
+  width: 150px;
+  height: 180px;
+}
+.contact-item {
+ margin-left: 35px;
+ margin-right: 35px;
+}
+.main-container {
+  padding-top: 20px;
+  justify-content: center;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.skills,
+.contact {
+  width: 100%;
+  text-align: center; 
+}
+.skills-container {
+  justify-content: center; 
+}
+.skill-card {
+  width: 80%;
+  margin-right: 18px;
+}
+.skill-experience{
+  font-size: 18px;
+}
+.skillh2{
+  margin-right: 25px;
+}
+h2{
+  margin-right: 25px;
+}
+
+}
+
+@media (max-width: 300px) {
+.banner {
+  height: 80px;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+}
+.circle img {
+  width: 100px;
+  height: 120px;
+}
+.section {
+  margin-bottom: 10px;
+}
+.edu-item,
+.exp-item,
+.contact-item,
+.skill-card {
+  width: 100%;
+}
+.spinny {
+  margin-top: 100px;
+}
 }
 
 </style>

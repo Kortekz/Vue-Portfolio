@@ -1,6 +1,9 @@
 <template>
   
-  <div class="Projs">
+  <!-- putting all ifs into one dive to help display the spinner -->
+  <div v-if="projects && projects.length> 0">
+
+    <div class="Projs">
     <div v-if="projects && projects.length > 0">
       <!-- Chunk of code to display the first object in projects array -->
       <div class="textPro" v-if="projects[0].projectTitle && projects[0].projectDescription">
@@ -29,10 +32,15 @@
         </div>
       </div>
     </div>
-    <div v-else>
-      <p>No information available.</p>
-    </div>
+
   </div>
+
+</div>
+
+    <div v-else class="spinny">
+      <div class="spinner-border"></div>
+    </div>
+  
 </template>
 
 <script>
@@ -54,9 +62,12 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-left: 50px;
+  margin-right: 50px;
+
 }
 .card {
-  width: calc(30% - 50px); /* Adjust as needed, considering margins */
+  width: calc(30% - 40px); 
   margin: 40px;
   border: 2px solid transparent !important;
   padding: 25px !important;
@@ -73,8 +84,8 @@ export default {
 }
 .card img {
   width: 100%;
-  height: 260px; /* Set a fixed height for the images */
-  object-fit: cover; /* Ensure images fill the container while maintaining aspect ratio */
+  height: 260px; 
+  object-fit: cover; 
   margin-bottom: 10px;
   border-radius: 25px;
 }
@@ -112,8 +123,55 @@ export default {
   border-radius: 5px;
   transition: background-color 0.3s;
 }
-
 .link:hover {
   background-color: #003366;
+}
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 768px) {
+.card {
+  width: calc(100% - 20px); 
+  margin: 20px;
+  }
+.projectImage {
+  height: 200px;
+  }
+.Description1 {
+  font-size: 16px; 
+  padding-top: 10px;
+  padding-bottom: 30px;
+  }
+.name {
+  font-size: 18px; 
+  }
+.description {
+  font-size: 16px;
+  }
+.project-container{
+  margin-left: 25px;
+  margin-right: 25px;
+  }
+}
+
+/* Additional media query for 300px */
+@media screen and (max-width: 300px) {
+.card {
+  width: calc(100% - 10px); 
+  margin: 10px;
+  }
+.projectImage {
+  height: 150px; 
+  }
+.Description1 {
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  }
+.name {
+  font-size: 16px;
+  }
+.description {
+  font-size: 14px; 
+  }
 }
 </style>
