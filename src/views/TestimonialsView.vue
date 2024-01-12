@@ -1,7 +1,11 @@
 <template>
+
+
   <div class="Testys">
+
+    <!-- allows me to make use of spinner easier -->
     <div v-if="testimonials && testimonials.length > 0">
-      <!-- Chunk of code to display the first object in testimonials array -->
+
       <div class="textHome" v-if="testimonials[0].title && testimonials[0].description">
         <div>
           <h1 class="title">{{ testimonials[0].title }}</h1>
@@ -27,9 +31,11 @@
         </div>
       </div>
     </div>
-    <div v-else>
-      <p>No information available.</p>
+
+    <div v-else class="spinny">
+      <div class="spinner-border"></div>
     </div>
+
   </div>
 </template>
 
@@ -47,6 +53,18 @@ export default {
 </script>
 
 <style>
+.spinny {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 300px; */
+  margin-top: 200px;
+}
+.spinner-border {
+  color: white;
+  text-align: center;
+}
 .title {
   color: #005ae2;
 }
@@ -62,11 +80,11 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
-  max-width: 1400px; /* Adjust as needed */
+  max-width: 1400px; 
 }
 .image-container {
   width: 100%;
-  height: 250px; /* Set a fixed height for the images */
+  height: 250px; 
   overflow: hidden;
   padding: 20px;
   margin-bottom: 20px;
@@ -74,7 +92,8 @@ export default {
 .testimonialImage {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Ensure images fill the container while maintaining aspect ratio */
+  object-fit: cover; 
+  /* images fill the container while maintaining aspect ratio */
 }
 .card {
   width: calc(33.33% - 80px); 
@@ -114,51 +133,81 @@ export default {
 .Testys{
   padding-bottom: 150px;
 }
+/* Media query for mobile responsiveness */
 @media screen and (max-width: 768px) {
   .card {
-    width: calc(40% - 20px); /* For smaller screens, two cards in a row */
-    margin-left: 20px;
-    margin-right: 20px;
+  width: calc(40% - 20px); 
+  margin-left: 20px;
+  margin-right: 20px;
   }
   .image-container {
-    height: 100px; /* Adjust the height of the image container */
-    margin-bottom: 10px; /* Adjust the margin between the image container and card content */
+  height: 100px; 
+  margin-bottom: 10px; 
   }
   .testimonialImage {
-    max-height: 100%; /* Ensure images fill the container vertically */
+  max-height: 100%; 
   }
   .card-content {
-    font-size: 8px; /* Adjust font size for smaller screens */
+  font-size: 14px; 
   }
   .card img {
-    max-width: 100%; /* Set a maximum width to ensure responsiveness */
-    height: auto;
-    margin-bottom: 0; /* Remove margin below the images */
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0; 
+  }
+  .quote{
+    font-size: 14px;
+  }
+  .name{
+    font-size: 16px;
   }
 }
-
-@media screen and (max-width: 300px) {
+/* Responsiveness for 500px */
+@media screen and (max-width: 500px) {
   .testimonial-container {
-    justify-content: center;
+  justify-content: center;
   }
   .card {
-    width: calc(80% - 20px); /* Adjust the width for smaller screens */
-    margin: 20px 0px;
+  width: calc(80% - 20px); 
+  margin: 20px 0px;
   }
   .image-container {
-    height: 120px; /* Adjust the height of the image container */
+  height: 220px; 
   }
   .testimonialImage {
-    max-height: 100%; /* Ensure images fill the container vertically */
+  max-height: 100%; 
   }
   .card-content {
-    font-size: 10px; /* Adjust font size for smaller screens */
+  font-size: 12px;
   }
   .card img {
-    max-width: 100%; /* Set a maximum width to ensure responsiveness */
-    height: auto;
-    margin-bottom: 0; /* Remove margin below the images */
+  max-width: 100%; 
+  height: auto;
+  margin-bottom: 0; 
   }
 }
-
+/* responsiveness for mobiles on 300px */
+@media screen and (max-width: 300px) {
+  .testimonial-container {
+  justify-content: center;
+  }
+  .card {
+  width: calc(80% - 20px); 
+  margin: 20px 0px;
+  }
+  .image-container {
+  height: 120px; 
+  }
+  .testimonialImage {
+  max-height: 100%; 
+  }
+  .card-content {
+  font-size: 12px;
+  }
+  .card img {
+  max-width: 100%; 
+  height: auto;
+  margin-bottom: 0; 
+  }
+}
 </style>
