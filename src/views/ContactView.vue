@@ -1,16 +1,26 @@
 <template>
 
-  <div class="contact">
-
+  
+    <div class="contact">
     <h1 class="contactH1">Contact</h1>
 
     <div class="extra">
       <div class="contact-info">
-        <p class="icons"><i class='fas fa-map-marker-alt' style='font-size:35px;color:rgb(110, 178, 255)'></i> Cape Town</p>
-        <p class="icons"><i class='far fa-envelope-open' style='font-size:35px;color:rgb(110, 178, 255)'></i> Email: cornebalie789@gmail.com</p>
-        <p class="icons"><i class='far fa-address-card' style='font-size:35px;color:rgb(110, 178, 255)'></i> Contact number: 061 027 8132</p>
+        <div class="icon-and-text">
+          <i class="fas fa-map-marker-alt"></i>
+          <p class="icons">Cape Town</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-envelope"></i>
+          <p class="icons">Email: cornebalie789@gmail.com</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-phone"></i>
+          <p class="icons">Contact number: 061 027 8132</p>
+        </div>
       </div>
-</div>
+    </div>
+
 
 <div class="extra2">
   <div class="contact-info2">
@@ -101,7 +111,25 @@
 </script>
 
 <style scoped>
+.icon-and-text {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 10px; */
+  /* margin-top: 15px; */
+  margin-left: 15px;
+}
 
+i{
+  color: #005ae2;
+  margin-bottom: 35px;
+  /* margin-left: 15px; */
+  font-size: 25px;
+}
+
+.icons {
+  font-size: 20px;
+  margin-left: 25px;
+}
 .contactH1{
 color: #005ae2;
 padding-top: 20px;
