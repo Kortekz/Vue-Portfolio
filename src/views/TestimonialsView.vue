@@ -84,7 +84,7 @@ export default {
 }
 .image-container {
   width: 100%;
-  height: 250px; 
+  height: 280px; 
   overflow: hidden;
   padding: 20px;
   margin-bottom: 20px;
@@ -113,7 +113,7 @@ export default {
 }
 .card img {
   width: 100%;
-  height: auto;
+  height: 145%;
   margin-bottom: 10px;
 }
 .card-content {
@@ -172,7 +172,7 @@ export default {
   margin: 20px 0px;
   }
   .image-container {
-  height: 220px; 
+  height: 260px; 
   }
   .testimonialImage {
   max-height: 100%; 
@@ -181,10 +181,10 @@ export default {
   font-size: 12px;
   }
   .card img {
-  max-width: 100%; 
-  height: auto;
-  margin-bottom: 0; 
-  }
+  width: 230px;
+  height: 300px;
+  margin-bottom: 10px;
+  } 
 }
 /* responsiveness for mobiles on 300px */
 @media screen and (max-width: 300px) {
