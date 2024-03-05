@@ -74,11 +74,12 @@ export default {
 }
 .container {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center; 
+  align-items: center; 
   flex-wrap: wrap;
   padding: 20px;
-  margin-left: 150px;
+  width: 80%; 
+  margin: 50px auto; /* Center the container and add a fixed top margin */
 }
 .content-wrapper {
   display: flex;
@@ -99,7 +100,7 @@ export default {
   flex: 1;
   text-align: left;
   padding-right: 20px; /* Adjust spacing between content and image */
-  padding-top: 20px;
+  padding-top: -20px;
 }
 .name{
   color: #005ae2;
@@ -124,7 +125,7 @@ export default {
   border: 4px solid rgb(79, 78, 78);
   border-radius: 20px;
   /* Apply animation to the image border */
-  animation: borderAndBoxShadowAnimation 2s infinite;
+  /* animation: borderAndBoxShadowAnimation 2s infinite; */
   position: relative;
   overflow: hidden;
 }
@@ -222,7 +223,7 @@ transition: 0.5s;
 }
 
 /* Define the animation for the border and box shadow */
-@keyframes borderAndBoxShadowAnimation {
+/* @keyframes borderAndBoxShadowAnimation {
 0% {
   border-color: rgb(79, 78, 78);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -235,6 +236,6 @@ transition: 0.5s;
   border-color: rgb(79, 78, 78);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   }
-}
+} */
 
 </style>
