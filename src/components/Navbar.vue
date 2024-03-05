@@ -149,4 +149,26 @@ nav a:hover {
   }
 }
 
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+  }
+  
+  50% {
+    transform: scale(1.2);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}
+
+.image1 {
+  width: 95px;
+  height: 100px;
+  padding: 15px;
+  margin-left: 20px;
+  animation: pulseAnimation 3s infinite; 
+}
+
 </style>

@@ -33,7 +33,7 @@ padding-bottom: 20px;
 .fontP{
   color: white;
   font-size: 18px;
-  margin-left: 40px;
+  margin-left: 50px;
   margin-right: 40px;
 }
 .imgAb{
@@ -43,6 +43,8 @@ padding-bottom: 100px;
   max-width: 40%;
   height: auto;
   border: 4px solid rgb(79, 78, 78);
+  border-radius: 20px;
+  margin-top: 20px;
   position: relative;
   overflow: hidden;
   /* Define the animation for the border and box shadow */
