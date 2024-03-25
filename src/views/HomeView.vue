@@ -18,16 +18,17 @@
             </h2>
             
             <div class="iconz">
-            <a href="https://web.facebook.com/C0rne.Balie" class="fab fa-facebook"></a>
-            <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin"></a>
-            <a href="https://www.instagram.com/corne.balie/" class="fab fa-instagram"></a>
+              <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin"></a>
+              <a href="https://github.com/Kortekz">
+                      <button class="contact-git">GITHUB</button>
+                  </a>
             </div>
 
-            <div class="btns">
+            <!-- <div class="btns">
                 <a href="https://github.com/Kortekz">
                     <button class="contact-git">GITHUB</button>
                 </a>
-            </div>
+            </div> -->
 
           </div>
 
@@ -100,32 +101,36 @@ export default {
   flex: 1;
   text-align: left;
   padding-right: 20px; /* Adjust spacing between content and image */
-  padding-top: -20px;
+  padding-top: 20px;
 }
 .name{
   color: #005ae2;
+  font-size: 45px;
 } 
 .homeCo{
   color: #005ae2;
   padding-top: 20px;
+  font-size: 40px;
+  font-weight: 600;
 }
 .title{
   color: white;
   padding-top: 20px;
+  font-size: 40px;
 }
 .HomeP{
   color: white;
   padding-top: 20px;
-  font-size: 20px;
+  font-size: 25px;
   margin-right: 50px;
 }
 .Me {
-  max-width: 65%; 
+  max-width: 75%; 
   height: auto;
   border: 4px solid rgb(79, 78, 78);
   border-radius: 20px;
   /* Apply animation to the image border */
-  /* animation: borderAndBoxShadowAnimation 2s infinite; */
+  animation: borderAndBoxShadowAnimation 2s infinite;
   position: relative;
   overflow: hidden;
 }
@@ -141,6 +146,8 @@ border-radius: 10px;
 margin-right: 10px;
 margin-left: 10px;
 transition: 0.3s;
+padding-bottom: 20px;
+padding-top: 13px;
 }
 .fa-facebook:hover{
 color: white;
@@ -155,6 +162,8 @@ color: white;
 .fa-linkedin {
 background: #1385b9;
 color: white;
+/* padding-top: px; */
+font-size: 25px;
 }
 .fa-linkedin:hover{
 color: white;
@@ -173,8 +182,9 @@ transform: scale(1.1);
 box-shadow: 0 0 20px rgb(172, 0, 149);
 }
 .iconz{
-padding-top: 20px;
+padding-top: 10px;
 margin-left: -10px;
+justify-content: flex-end;
 }
 .btns{
   padding-top: 30px;
@@ -191,7 +201,8 @@ border-radius: 10px;
 border: none;
 text-decoration: none; 
 transition: 0.5s;
-margin-right: 0px;
+margin-left: 15px;
+margin-top: px !important;
 }
 .contact-git:hover {
 background-color: transparent;
@@ -223,7 +234,7 @@ transition: 0.5s;
 }
 
 /* Define the animation for the border and box shadow */
-/* @keyframes borderAndBoxShadowAnimation {
+@keyframes borderAndBoxShadowAnimation {
 0% {
   border-color: rgb(79, 78, 78);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -236,6 +247,6 @@ transition: 0.5s;
   border-color: rgb(79, 78, 78);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   }
-} */
+}
 
 </style>
