@@ -1,81 +1,68 @@
 <template>
+  <h1 class="contactH1">Contact</h1>
 
-  
-    <div class="contact">
-    <h1 class="contactH1">Contact</h1>
-
-    <div class="extra">
-      <div class="contact-info">
+  <div class="contact-container">
+    <!-- Left side with contact info and social links -->
+    <div class="contact-info">
+      <div class="extra">
         <div class="icon-and-text">
           <i class="fas fa-map-marker-alt"></i>
-          <p class="icons">Cape Town</p>
+          <p class="icons"> Mitchells Plain</p>
         </div>
         <div class="icon-and-text">
           <i class="fas fa-envelope"></i>
-          <p class="icons">Email: cornebalie789@gmail.com</p>
+          <p class="icons">cornebalie789@gmail.com</p>
         </div>
         <div class="icon-and-text">
           <i class="fas fa-phone"></i>
-          <p class="icons">Contact number: 061 027 8132</p>
+          <p class="icons">061 027 8132</p>
         </div>
       </div>
+
+      <!-- <div class="extra2">
+        <h3>Here are my social media for faster replies!</h3>
+        <div class="icony">
+          <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin"></a>
+          <a href="https://github.com/Kortekz" class="contact-git">GITHUB</a>
+        </div>
+      </div> -->
+
     </div>
 
+    <!-- Right side with contact form -->
+    <div class="form-container">
+      <form id="contactForm" action="https://formspree.io/f/mdoqknae" method="POST">
+        <label>
+          <p class="formF">Name:</p>
+          <input type="text" name="name" required data-First>
+        </label>
 
-<div class="extra2">
-  <div class="contact-info2">
-            <h3>Here are my social media for faster replies!</h3>
+        <label>
+          <p class="formF">Surname:</p>
+          <input type="text" name="surname" required data-Surname>
+        </label>
 
-            <div class="icony">
-            <a href="https://web.facebook.com/C0rne.Balie" class="fab fa-facebook"></a>
-            <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin"></a>
-            <a href="https://www.instagram.com/corne.balie/" class="fab fa-instagram"></a>
+        <label>
+          <p class="formF">Contact:</p>
+          <input type="tel" name="contact" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" data-Contact>
+        </label>
 
-            </div>
-          
-            <h3>Have a look at my Github! </h3>
-            <div class="btns">
-                <a href="https://github.com/Kortekz">
-                    <button class="contact-git">GITHUB</button>
-                </a>
-            </div>
-            </div>
-</div>
-      
+        <label>
+          <p class="formF">Email:</p>
+          <input type="email" name="email" required data-Email>
+        </label>
 
-      <div class="form-container">
-        <form id="contactForm" action="https://formspree.io/f/mdoqknae" method="POST">
-          <label>
-            <p class="formF">Name:</p>
-            <input type="text" name="name" required data-First>
-          </label>
+        <label>
+          <p class="formF">Message:</p>
+          <textarea name="message" required data-Message></textarea>
+        </label>
 
-          <label>
-            <p class="formF">Surname:</p>
-            <input type="text" name="surname" required data-Surname>
-          </label>
-
-          <label>
-            <p class="formF">Contact:</p>
-            <input type="tel" name="contact" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" data-Contact>
-          </label>
-
-          <label>
-            <p class="formF">Email:</p>
-            <input type="email" name="email" required data-Email>
-          </label>
-
-          <label>
-            <p class="formF">Message:</p>
-            <textarea name="message" required data-Message></textarea>
-          </label>
-
-          <button type="submit" class="sendBtn" value="Send" data-sendBtn>Send</button>
-        </form>
-      </div>
-    
+        <button type="submit" class="sendBtn" value="Send" data-sendBtn>Send</button>
+      </form>
+    </div>
   </div>
 </template>
+
 
 <script>
  export default {
@@ -111,12 +98,34 @@
 </script>
 
 <style scoped>
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  margin-left: -150px;
+  margin-bottom: 150px;
+}
+
+.contact-info {
+  width: 75% !important;
+  margin-left: 250px !important;
+  /* padding-left: 100px; */
+}
+
+.form-container {
+  width: 45%;
+  margin-top: -110px !important;
+  margin-left: 250px !important;
+}
+
 .icon-and-text {
   display: flex;
   align-items: center;
   /* margin-bottom: 10px; */
   /* margin-top: 15px; */
   margin-left: 15px;
+  
 }
 
 i{
@@ -127,13 +136,14 @@ i{
 }
 
 .icons {
-  font-size: 20px;
+  font-size: 25px !important;
   margin-left: 25px;
 }
 .contactH1{
 color: #005ae2;
 padding-top: 20px;
 padding-bottom: 50px;
+text-align: center;
 }
 .icons{
 font-size: 20px;
@@ -170,17 +180,20 @@ margin-top: -240px;
 h3{
 padding-bottom: 20px;
 font-size: 20px;
+text-align: center;
+margin: 0 auto;
+margin-left: 100px;
 }
 /* CONTACT ICONS */ /* CONTACT ICONS */ /* CONTACT ICONS */ /* CONTACT ICONS */
 .fab {
-padding: 15px;
+padding: 13px;
 font-size: 25px;
 width: 55px;
 text-align: center;
 text-decoration: none;
 border-radius: 10px;
 margin-right: 15px;
-margin-left: 15px;
+margin-left: 150px !important;
 transition: 0.3s;
 }
 .fa-facebook:hover{
@@ -194,8 +207,9 @@ background: #3B5998;
 color: white;
 }
 .fa-linkedin {
-background: #1385b9;
-color: white;
+  background: #1385b9;
+  color: white;
+  margin-left: 20px; /* Adjusted margin to align more to the left */
 }
 .fa-linkedin:hover{
 color: white;
@@ -203,23 +217,15 @@ opacity: 1.5;
 transform: scale(1.05);
 box-shadow: 0 0 20px #1385b9;
 }
-.fa-instagram {
-background: rgb(172, 0, 149);
-color: white;
-}
-.fa-instagram:hover{
-color: white;
-opacity: 1.5;
-transform: scale(1.05);
-box-shadow: 0 0 20px rgb(172, 0, 149);
-}
-.icony{
-padding-bottom: 20px;
+
+.icony {
+  padding-bottom: 20px;
+  margin-left: -40px; /* Adjusted margin to align more to the left */
 }
 .contact-git {
-padding: 15px;
+padding: 12px;
 background: #005ae2;
-font-size: 15px;
+font-size: 14px;
 color: white;
 font-weight: 500;
 text-decoration: none;
@@ -227,7 +233,7 @@ border-radius: 10px;
 border: none;
 text-decoration: none; 
 transition: 0.5s;
-margin-right: 0px;
+margin-right: 15px;
 }
 .contact-git:hover {
 background-color: transparent;
@@ -379,3 +385,4 @@ width: 100%;
 }
 
 </style>
+
