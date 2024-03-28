@@ -18,9 +18,10 @@
             </h2>
             
             <div class="iconz">
-              <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin"></a>
-              <a href="https://github.com/Kortekz">
-                      <button class="contact-git">GITHUB</button>
+              <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin" target="_blank"></a>
+
+              <a href="https://github.com/Kortekz" target="_blank">
+                      <button class="contact-git" >GITHUB</button>
                   </a>
             </div>
 

@@ -32,7 +32,7 @@ padding-bottom: 20px;
 }
 .fontP{
   color: white;
-  font-size: 18px;
+  font-size: 22px;
   margin-left: 50px;
   margin-right: 40px;
 }

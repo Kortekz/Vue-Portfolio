@@ -111,7 +111,8 @@
   align-items: flex-start;
   padding: 20px;
   margin-left: -150px;
-  margin-bottom: 150px;
+  margin-bottom: 150px !important;
+  margin: 0 auto;
 }
 
 .contact-info {

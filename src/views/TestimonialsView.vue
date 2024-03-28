@@ -70,7 +70,7 @@ export default {
 }
 .Description {
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -105,7 +105,7 @@ export default {
   width: calc(33.33% - 80px); 
   margin: 40px 0px;
   border: 2px solid transparent !important;
-  padding: 15px;
+  padding: 20px;
   border-radius: 25px !important;
   overflow: hidden;
   background-color: transparent !important;
@@ -130,11 +130,13 @@ export default {
   font-weight: bold;
   margin-bottom: 5px;
   color: white;
+  font-size: 24px;
 }
 .quote {
   font-style: italic;
   color: white;
   margin: auto;
+  font-size: 22px;
 }
 .Testys{
   padding-bottom: 150px;

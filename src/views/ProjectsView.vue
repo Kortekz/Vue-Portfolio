@@ -98,7 +98,7 @@ export default {
 }
 .Description1 {
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   padding-top: 20px;
   padding-bottom: 50px;
 }
@@ -108,7 +108,7 @@ export default {
 }
 .description{
   color: white;
-  font-size: 20px;
+  font-size: 22px;
 }
 .project-container {
   padding-bottom: 150px;
@@ -119,7 +119,7 @@ export default {
   padding: 10px 15px;
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 22px;
   background-color: #005ae2;
   border-radius: 5px;
   transition: background-color 0.3s;
