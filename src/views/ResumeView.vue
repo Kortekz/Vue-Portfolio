@@ -45,26 +45,13 @@
         </div>
   
         <!-- Contact Section -->
-        <div class="section contact">
-          <h2>Contact</h2>
-          <div class="contact-item" v-if="contact">
-            <p class="contact-info" v-if="contact.address">
-              <i class="fas fa-map-marker-alt"></i> <p class="addy">{{ contact.address }} </p>
-            </p>
-            <p class="contact-info" v-if="contact.phone">
-              <i class="fas fa-phone"></i> <p class="phone"> {{ contact.phone }}</p>
-            </p>
-            <p class="contact-info" v-if="contact.email">
-              <i class="fas fa-envelope"></i> <p class="email"> {{ contact.email }}</p>
-            </p>
-
-          
+        <div class="section-contact">
+        <h2 class="downhead">Download My Resume Below!</h2>
+          <div class="contact-item">
+            <button class="resume-button" @click="downloadResume">Resume</button>
           </div>
         </div>
-  
-  
-  
-      
+        
         <!-- Skills Section -->
         <div class="section skills">
           <h2 class="skillh2">Skills</h2>
@@ -120,10 +107,42 @@
       this.$store.dispatch('fetchContact');
       this.$store.dispatch('fetchImage');
     },
+    methods: {
+      downloadResume() {
+      const resumeUrl = 'https://drive.google.com/file/d/1POdn0fnpeBkTYcsU3PgfEAZTBvpoH6mh/view?usp=sharing';
+      const link = document.createElement('a');
+      link.href = resumeUrl;
+      link.download = 'CornéResume.pdf';
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  },
   };
   </script>
   
   <style scoped>
+.resume-button {
+  padding: 15px;
+  background-color: #005ae2;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  transition: 0.5s;
+  /* margin-left: 15px; */
+  margin-right: 100px;
+}
+
+.resume-button:hover {
+  background-color: transparent;
+  border: 2px solid #005ae2;
+  transform: scale(1.05); 
+  box-shadow: 0 0 20px #005ae2; 
+}
   .spinny {
     text-align: center;
     display: flex;
@@ -296,16 +315,22 @@
     padding-top: 15px;
   }
   .main-container {
-    max-width: 2000px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column; 
     align-items: center; 
     padding-top: 40px;
+    /* margin-left: 35px;
+    margin-right: 35px; */
   }
   
   /* Responsive adjustments */
   @media (max-width: 786px) {
+    .resume-button {
+    margin-right: 25px;
+    margin-bottom: 15px;
+  }
   .resume {
     flex-direction: column;
   }
@@ -360,16 +385,26 @@
   }
   
   @media (max-width: 300px) {
+    .section-contact{
+      width:100%;
+    }
+    .downhead{
+      margin-left: 30px; 
+    }
+    .resume-button {
+    margin-right: 40px;
+    margin-bottom: 15px;
+  }
   .banner {
     height: 80px;
   }
   .circle {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }
   .circle img {
-    width: 100px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
   }
   .section {
     margin-bottom: 10px;
@@ -379,10 +414,15 @@
   .contact-item,
   .skill-card {
     width: 100%;
+    margin-left: 20px;
   }
   .spinny {
     margin-top: 100px;
   }
+  .skillh2{
+    margin-left: 20px;
+  }
+  
   }
   
   </style>

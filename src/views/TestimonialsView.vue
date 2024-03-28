@@ -83,18 +83,24 @@ export default {
   max-width: 1400px; 
 }
 .image-container {
-  width: 100%;
-  height: 280px; 
-  overflow: hidden;
+  width: 350px;
+  height: 250px; 
+  /* overflow: hidden; */
   padding: 20px;
   margin-bottom: 20px;
+  border-radius: 25px; /* Added border-radius */
 }
 .testimonialImage {
-  width: 100%;
-  height: auto;
+  width: 350px;
+  height: 350px;
   object-fit: cover; 
+  border-radius: 25px; /* Added border-radius */
   /* images fill the container while maintaining aspect ratio */
 }
+.card-content{
+  margin-top: 50px;
+}
+
 .card {
   width: calc(33.33% - 80px); 
   margin: 40px 0px;

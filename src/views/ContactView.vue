@@ -1,64 +1,67 @@
 <template>
-  <h1 class="contactH1">Contact</h1>
+  <div>
+    <h1 class="contactH1">Contact</h1>
+    
+    <div class="contact-container">
+      <!-- Left side with contact info and social links -->
+      <div class="contact-info">
+        <p class="contact-message">I'm always happy to hear from you and discuss opportunities. Feel free to reach out!</p>
+        <div class="extra">
+          <div class="icon-and-text">
+            <i class="fas fa-map-marker-alt"></i>
+            <p class="icons"> Mitchells Plain</p>
+          </div>
+          <div class="icon-and-text">
+            <i class="fas fa-envelope"></i>
+            <p class="icons">cornebalie789@gmail.com</p>
+          </div>
+          <div class="icon-and-text">
+            <i class="fas fa-phone"></i>
+            <p class="icons">061 027 8132</p>
+          </div>
+        </div>
 
-  <div class="contact-container">
-    <!-- Left side with contact info and social links -->
-    <div class="contact-info">
-      <div class="extra">
-        <div class="icon-and-text">
-          <i class="fas fa-map-marker-alt"></i>
-          <p class="icons"> Mitchells Plain</p>
-        </div>
-        <div class="icon-and-text">
-          <i class="fas fa-envelope"></i>
-          <p class="icons">cornebalie789@gmail.com</p>
-        </div>
-        <div class="icon-and-text">
-          <i class="fas fa-phone"></i>
-          <p class="icons">061 027 8132</p>
-        </div>
+        <!-- <div class="extra2">
+          <h3>Here are my social media for faster replies!</h3>
+          <div class="icony">
+            <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin"></a>
+            <a href="https://github.com/Kortekz" class="contact-git">GITHUB</a>
+          </div>
+        </div> -->
+
       </div>
 
-      <!-- <div class="extra2">
-        <h3>Here are my social media for faster replies!</h3>
-        <div class="icony">
-          <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin"></a>
-          <a href="https://github.com/Kortekz" class="contact-git">GITHUB</a>
-        </div>
-      </div> -->
+      <!-- Right side with contact form -->
+      <div class="form-container">
+        <form id="contactForm" action="https://formspree.io/f/mdoqknae" method="POST">
+          <label>
+            <p class="formF">Name:</p>
+            <input type="text" name="name" required data-First>
+          </label>
 
-    </div>
+          <label>
+            <p class="formF">Surname:</p>
+            <input type="text" name="surname" required data-Surname>
+          </label>
 
-    <!-- Right side with contact form -->
-    <div class="form-container">
-      <form id="contactForm" action="https://formspree.io/f/mdoqknae" method="POST">
-        <label>
-          <p class="formF">Name:</p>
-          <input type="text" name="name" required data-First>
-        </label>
+          <label>
+            <p class="formF">Contact:</p>
+            <input type="tel" name="contact" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" data-Contact>
+          </label>
 
-        <label>
-          <p class="formF">Surname:</p>
-          <input type="text" name="surname" required data-Surname>
-        </label>
+          <label>
+            <p class="formF">Email:</p>
+            <input type="email" name="email" required data-Email>
+          </label>
 
-        <label>
-          <p class="formF">Contact:</p>
-          <input type="tel" name="contact" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" data-Contact>
-        </label>
+          <label>
+            <p class="formF">Message:</p>
+            <textarea name="message" required data-Message></textarea>
+          </label>
 
-        <label>
-          <p class="formF">Email:</p>
-          <input type="email" name="email" required data-Email>
-        </label>
-
-        <label>
-          <p class="formF">Message:</p>
-          <textarea name="message" required data-Message></textarea>
-        </label>
-
-        <button type="submit" class="sendBtn" value="Send" data-sendBtn>Send</button>
-      </form>
+          <button type="submit" class="sendBtn" value="Send" data-sendBtn>Send</button>
+        </form>
+      </div>
     </div>
   </div>
 </template>
@@ -74,14 +77,10 @@
     initializeForm() {
   // declaring the button that will be used to send the data to form spree
   let sendButton = document.querySelector("[data-sendBtn]");
-  
-  // Check if the sendButton is not null before adding the event listener
- 
-    // calling the sending button and adding an event listener to the button that, when clicked, has a setTimeout attached to it
-    sendButton.addEventListener("click", () => {
+  sendButton.addEventListener("click", () => {
       // the set timeout is set to 1 second and within the setTimeout, we are calling the clearTheForm method
       setTimeout(this.clearTheForm, 1000);
-    });
+  });
   
 },
     clearTheForm() {
@@ -98,6 +97,14 @@
 </script>
 
 <style scoped>
+.contact-message {
+  font-size: 22px;
+  color: white; 
+  margin-bottom: 80px; 
+  margin-left: 40px;
+  text-align: center; 
+  /* line-height: 1.5; */
+}
 .contact-container {
   display: flex;
   justify-content: space-between;
