@@ -26,7 +26,7 @@
             <p class="description">{{ data.description }}</p>
 
             <a class="link" :href="data.gitHub" >GitHub</a>
-            <a class="link" :href="data.netlify">Netlify</a>
+            <a class="link" :href="data.netlify">Website</a>
 
           </div>
         </div>
