@@ -25,8 +25,9 @@
             <p class="name">{{ data.name }} </p>
             <p class="description">{{ data.description }}</p>
 
-            <a class="link" :href="data.gitHub" >GitHub</a>
-            <a class="link" :href="data.netlify">Website</a>
+            <!-- Adding target="_blank" to open links in a new tab -->
+            <a class="link" :href="data.gitHub" target="_blank">GitHub</a>
+            <a class="link" :href="data.netlify" target="_blank">Website</a>
 
           </div>
         </div>
