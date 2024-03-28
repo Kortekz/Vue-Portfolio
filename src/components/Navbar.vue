@@ -69,7 +69,7 @@ nav a {
   display: inline-block;
  position: relative;
  color: white ;
- font-size: 18px !important;
+ font-size: 22px !important;
  text-decoration: none;
  margin: 0 10px;
  transition: color 0.3s ease-in-out;

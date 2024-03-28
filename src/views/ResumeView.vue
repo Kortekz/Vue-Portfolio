@@ -126,7 +126,7 @@
 .resume-button {
   padding: 15px;
   background-color: #005ae2;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   font-weight: 500;
   text-decoration: none;
@@ -246,17 +246,17 @@
   }
   h2 {
     color: white;
-    font-size: 24px;
+    font-size: 28px !important;
     padding-bottom: 20px;
   }
   h3 {
-    font-size: 22px !important;
+    font-size: 24px !important;
   }
   .skillh2{
     padding-bottom: 40px;
   }
   .skill-experience {
-    font-size: 14px;
+    font-size: 18px;
   }
   h2 {
     color: white;
@@ -266,22 +266,22 @@
     font-size: 18px;
   }
   .skill-experience{
-    font-size: 14px;
+    font-size: 18px;
   }
   .edu-type, .edu-place, .edu-des, .exp-des, .exp-occupation, .skill-experience, .contact-info {
     margin: 5px 0;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
   }
   .edu-type{
     font-weight: 800 !important;
     color: #3385ff;
-    font-size: 20px;
+    font-size: 24px;
   }
   .exp-occupation{
     font-weight: 600 !important;
     color: #3385ff;
-    font-size: 20px;
+    font-size: 24px;
   }
   /* icons styling */
   .contact-info i {
@@ -315,7 +315,7 @@
     padding-top: 15px;
   }
   .main-container {
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
     display: flex;
     flex-direction: column; 
