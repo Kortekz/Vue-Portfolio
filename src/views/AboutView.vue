@@ -22,23 +22,27 @@
 </script>
 
 <style>
-.about{
+.about {
   margin-left: 40px;
   margin-right: 40px;
 }
-.aboutH1{
-color: #005ae2;
-padding-bottom: 20px;
+
+.aboutH1 {
+  color: #005ae2;
+  padding-bottom: 20px;
 }
-.fontP{
+
+.fontP {
   color: white;
   font-size: 22px;
   margin-left: 50px;
   margin-right: 40px;
 }
-.imgAb{
-padding-bottom: 100px;
+
+.imgAb {
+  padding-bottom: 100px;
 }
+
 .Me2 {
   max-width: 40%;
   height: auto;
@@ -50,38 +54,52 @@ padding-bottom: 100px;
   /* Define the animation for the border and box shadow */
   animation: borderAndBoxShadowAnimation 2s infinite;
 }
-/* Responsiveness */
-@media (max-width: 768px) {
+
+/* Responsiveness for 720px */
+@media (max-width: 720px) {
   .fontP {
-    font-size: 16px; 
-  }
-  .Me2{
+    font-size: 16px;
     margin-left: 20px;
     margin-right: 20px;
-    max-width: 80%; 
-    height: auto;
+  }
+
+  .Me2 {
+    max-width: 80%;
+    margin-left: 20px;
+    margin-right: 20px;
     border: 4px solid rgb(79, 78, 78);
   }
 }
+
 /* Responsiveness for 300px */
 @media (max-width: 300px) {
   .fontP {
-    font-size: 12px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Me2 {
+    max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 4px solid rgb(79, 78, 78);
   }
 }
+
 /* Define the animation for the border and box shadow */
 @keyframes borderAndBoxShadowAnimation {
-0% {
-  border-color: rgb(79, 78, 78);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  0% {
+    border-color: rgb(79, 78, 78);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
-50% {
-  border-color: #00c3ff;
-  box-shadow: 0 0 20px #00c3ff;
+  50% {
+    border-color: #00c3ff;
+    box-shadow: 0 0 20px #00c3ff;
   }
-100% {
-  border-color: rgb(79, 78, 78);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  100% {
+    border-color: rgb(79, 78, 78);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   }
 }
 </style>

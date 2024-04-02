@@ -213,26 +213,118 @@ box-shadow: 0 0 20px #005ae2;
 transition: 0.5s;
 }
 
-/* Media query for tablet and mobile devices */
-@media (max-width: 768px) {
-.content-wrapper {
-  flex-direction: column;
-  align-items: center;
-}
-.Me {
-  width: 100%; /* Adjust image size for mobile */
-  margin-bottom: 20px; /* Add margin between image and content on mobile */
-  margin-left: -45px;
+/* Media query for 720px */
+@media (max-width: 720px) {
+  .container {
+    width: 90%; 
   }
-.container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 20px;
-  margin-left: 20px;
- }
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Me {
+    max-width: 90%; 
+    margin-left: 0; 
+  }
+
+  .content {
+    text-align: center; 
+    padding-right: 0; 
+  }
+
+  .name {
+    font-size: 35px; 
+  }
+
+  .homeCo {
+    font-size: 30px; 
+  }
+
+  .title {
+    font-size: 30px; 
+  }
+
+  .HomeP {
+    font-size: 20px; 
+    margin-right: 0;
+  }
 }
+
+/* Media query for 400px */
+@media (max-width: 400px) {
+  .container {
+    width: 100%; 
+  }
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content {
+  margin-top: -40px;
+  }
+  .Me {
+    margin-top: 50px;
+    max-width: 90%;
+    margin-left: 0; 
+  }
+  .content {
+    text-align: center; 
+    padding-right: 0; 
+  }
+  .name {
+    font-size: 30px; 
+  }
+  .homeCo {
+    font-size: 25px; 
+  }
+  .title {
+    font-size: 25px; 
+  }
+  .HomeP {
+    font-size: 20px; 
+    margin-right: 0; 
+  }
+}
+/* Media query for 300px */
+@media (max-width: 300px) {
+  .container {
+    width: 100%; 
+  }
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content {
+  margin-top: -40px;
+  }
+  .Me {
+    margin-top: 50px;
+    max-width: 90%; 
+    margin-left: 0; 
+  }
+  .content {
+    text-align: center; 
+    padding-right: 0; 
+  }
+  .name {
+    font-size: 30px; 
+  }
+  .homeCo {
+    font-size: 25px; 
+  }
+
+  .title {
+    font-size: 25px; 
+  }
+
+  .HomeP {
+    font-size: 18px; 
+    margin-right: 0;
+  }
+}
+
 
 /* Define the animation for the border and box shadow */
 @keyframes borderAndBoxShadowAnimation {
