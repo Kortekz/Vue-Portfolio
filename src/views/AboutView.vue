@@ -84,6 +84,7 @@
     margin-left: 10px;
     margin-right: 10px;
     border: 4px solid rgb(79, 78, 78);
+    margin-bottom: 20px;
   }
 }
 
