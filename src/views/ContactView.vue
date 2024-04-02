@@ -381,7 +381,10 @@ box-shadow: 0 0 20px #005ae2;
       font-size: 18px;
       margin-left: 20px;
     }
-
+    .contactH1{
+    color: #005ae2;
+    margin-left: 30px;
+    }
     .contact-container {
       padding: 10px;
       margin-left: -200px;
@@ -415,40 +418,50 @@ box-shadow: 0 0 20px #005ae2;
     }
   }
 
-  @media screen and (max-width: 300px) {
+@media screen and (max-width: 300px) {
     .contact-message {
       font-size: 16px;
-      margin-left: 10px;
+      margin-left: 35px;
+      margin-right: 30px;
+    }
+   
+    .contactH1{
+    color: #005ae2;
+    margin-left: 45px;
     }
 
     .contact-container {
       padding: 10px;
-      margin-left: -30px;
+      margin-left: -180px;
+    }
+
+    .extra{
+      margin-top: -40px;
     }
 
     .contact-info {
       width: 100%;
       margin-left: 0;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       text-align: center;
     }
 
     .form-container {
-      width: 100%;
-      margin-left: 0;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      width: 70%;
+      margin-left: 180px !important;
+      /* margin-top: 20px; */
+      /* margin-bottom: 20px; */
     }
 
     .icon-and-text {
       margin-left: 0;
+      /* font-size: 15px !important; */
     }
 
     .icons {
-      font-size: 16px !important;
+      font-size: 18px !important;
       margin-left: 10px;
     }
   }
-
 </style>
 
