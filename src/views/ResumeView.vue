@@ -379,11 +379,54 @@
     margin-right: 25px;
   }
   h2{
-    margin-right: 25px;
+    margin-right: 0px;
   }
   
   }
   
+/* responsiveness for 400px */
+  @media (max-width: 400px) {
+    .section-contact{
+      width:100%;
+    }
+    /* .downhead{
+      margin-left: 30px; 
+    } */
+    .resume-button {
+    margin-right: 40px;
+    margin-bottom: 15px;
+  }
+  .banner {
+    height: 80px;
+  }
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
+  .circle img {
+    width: 180px;
+    height: 180px;
+  }
+  .section {
+    margin-bottom: 10px;
+  }
+  .edu-item,
+  .exp-item,
+  .contact-item,
+  .skill-card {
+    width: 100%;
+    margin-left: 20px;
+  }
+  .spinny {
+    margin-top: 100px;
+  }
+  .skillh2{
+    margin-left: 20px;
+  }
+  
+  }
+
+  /* responsiveness for 300px */
   @media (max-width: 300px) {
     .section-contact{
       width:100%;
