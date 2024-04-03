@@ -205,7 +205,8 @@ transition: 0.5s;
 }
 
 /* Media query for 720px */
-@media (max-width: 720px) {
+@media (max-width: 767px) {
+  
   .container {
     width: 90%; 
   }
@@ -238,22 +239,70 @@ transition: 0.5s;
    .fab {
     padding: 12px;
     font-size: 30px;
-    width: 50px;
+    width: 60px !important;
   }
   /* Update GitHub icon style for mobile */
   .fab.fa-github {
     padding: 12px;
     font-size: 30px;
-    width: 50px;
+    width: 60px;
   }
   .iconz {
-  display: flex;
-  /* justify-content: flex-start;  */
-  margin: auto 0;
-  margin-left: 95px;
-  margin-top: -20px;
+    margin-top: -20px !important;
+    margin-bottom: 40px !important;
+    justify-content: center; /* Center the icons horizontally */
+    margin: 20px 0; /* Adjust margin as needed */
+  }
 }
 
+/* Media query for 450px */
+@media (max-width: 450px) {
+  .container {
+    width: 90%; 
+  }
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Me {
+    max-width: 90%; 
+    margin-left: 0; 
+  }
+  .content {
+    text-align: center; 
+    padding-right: 0; 
+  }
+  .name {
+    font-size: 35px; 
+  }
+  .homeCo {
+    font-size: 30px; 
+  }
+  .title {
+    font-size: 30px; 
+  }
+  .HomeP {
+    font-size: 20px; 
+    margin-right: 0;
+  }
+   /* Update icon styles for mobile */
+   .fab {
+    padding: 12px;
+    font-size: 30px;
+    width: 60px !important;
+  }
+  /* Update GitHub icon style for mobile */
+  .fab.fa-github {
+    padding: 12px;
+    font-size: 30px;
+    width: 60px;
+  }
+  .iconz {
+    margin-top: -20px !important;
+    margin-bottom: 40px !important;
+    justify-content: center; /* Center the icons horizontally */
+    margin: 20px 0; /* Adjust margin as needed */
+  }
 }
 
 /* Media query for 400px */
@@ -269,7 +318,7 @@ transition: 0.5s;
   margin-top: -40px;
   }
   .Me {
-    margin-top: 50px;
+    margin-top: 20px;
     max-width: 90%;
     margin-left: 0; 
   }
@@ -303,15 +352,12 @@ transition: 0.5s;
     width: 58px;
   }
   .iconz {
-  display: flex;
-  /* justify-content: flex-start;  */
-  margin: auto 0;
-  margin-left: 100px;
-  margin-top: -20px;
-}
+    justify-content: center; /* Center the icons horizontally */
+    margin: 0; /* Adjust margin as needed */
+  }
 }
 /* Media query for 300px */
-@media (max-width: 300px) {
+@media (max-width: 305px) {
   .container {
     width: 100%; 
   }
@@ -323,7 +369,7 @@ transition: 0.5s;
   margin-top: -40px;
   }
   .Me {
-    margin-top: 50px;
+    margin-top: 10px;
     max-width: 90%; 
     margin-left: 0; 
   }
@@ -348,21 +394,18 @@ transition: 0.5s;
   .fab {
     padding: 10px;
     font-size: 28px;
-    width: 50px;
+    width: 50px !important;
   }
   /* Update GitHub icon style for mobile */
   .fab.fa-github {
     padding: 10px;
     font-size: 28px;
-    width: 50px;
+    width: 50px !important;
   }
   .iconz {
-  display: flex;
-  /* justify-content: flex-start;  */
-  margin: auto 0;
-  margin-left: 60px;
-  margin-top: -20px;
-}
+    justify-content: center; 
+    margin: 0; 
+  }
 }
 
 

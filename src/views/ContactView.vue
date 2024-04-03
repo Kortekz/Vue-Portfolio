@@ -406,26 +406,43 @@ box-shadow: 0 0 20px #005ae2;
 }
 
  /* MEDIA QUERIES */
- @media screen and (max-width: 720px) {
+ @media screen and (max-width: 767px) {
     .contact-container {
       flex-direction: column;
       align-items: center;
+      margin: auto 0;
+      margin-left: -230px;
     }
+    /* .contact-message {
+      font-size: 18px;
+      margin-left: 20px;
+    } */
     .contact-info {
       width: 100%;
       margin-left: 0;
       text-align: center;
     }
-    .form-container {
+    .contact-message{
       width: 100%;
-      margin-left: 0;
-      margin-top: 20px;
+      margin-left: 15px !important;
+      margin: auto 0;
+      text-align: center;
+      margin-bottom: 40px !important;
+    }
+    .form-container {
+      width: 70%;
+      margin-left: 220px !important;
+      margin: auto 0;
+      margin-top: -20px !important;
     }
     .extra {
       justify-content: center;
     }
     .icon-and-text {
       margin-left: 0;
+    }
+    .iconz{
+      margin-top: 0px;
     }
   }
 
@@ -443,7 +460,7 @@ box-shadow: 0 0 20px #005ae2;
       margin-left: -220px;
     }
     .extra{
-      margin-top: -40px;
+      /* margin-top: -40px; */
     }
     .contact-info {
       width: 100%;
@@ -453,9 +470,11 @@ box-shadow: 0 0 20px #005ae2;
     }
     .form-container {
       width: 70%;
-      margin-left: 200px !important;
-      margin-top: 20px;
+      margin-left: 220px !important;
+      margin-top: -60px !important;
       margin-bottom: 20px;
+      margin: auto 0;
+      justify-content: center;
     }
     .icon-and-text {
       margin-left: 0;
@@ -465,60 +484,72 @@ box-shadow: 0 0 20px #005ae2;
       margin-left: 10px;
     }
     .iconz{
-      margin-bottom: 40px;
+      /* margin-bottom: 40px; */
       margin-top: 10px;
     }
 
   }
 
-@media screen and (max-width: 300px) {
-    .contact-message {
+@media (max-width: 320px) {
+  .contact-message {
       font-size: 16px;
-      margin-left: 35px;
-      margin-right: 30px;
+      width: fit-content;
+      margin: 40px;
+      margin-left: 30px !important;
+      margin-right: 20px !important;
     }
     .contactH1{
     color: #005ae2;
-    margin-left: 45px;
+    margin: auto 0;
+    text-align: center;
+    margin-bottom: -40px !important;
     }
     .contact-container {
       padding: 10px;
-      margin-left: -180px;
+      margin-left: -200px;
     }
     .extra{
-      margin-top: -40px;
+      /* margin-top: -40px; */
     }
     .contact-info {
       width: 100%;
       margin-left: 0;
       margin-bottom: 30px;
       text-align: center;
+      font-size: 16px;
     }
     .form-container {
-      width: 70%;
-      margin-left: 180px !important;
-      /* margin-top: 20px; */
-      /* margin-bottom: 20px; */
+      width: 60%;
+      margin-left: 220px !important;
+      margin-top: -60px !important;
+      margin-bottom: 20px;
+      margin: auto 0;
+      justify-content: center;
     }
     .icon-and-text {
       margin-left: 0;
-      /* font-size: 15px !important; */
     }
     .icons {
       font-size: 18px !important;
       margin-left: 10px;
     }
-    .iconz{
-      margin-bottom: 40px;
-      margin-top: 10px;
-    }
-        /* Update icon styles */
-.fab {
-  padding: 12px;
-  font-size: 30px !important;
-  width: 60px !important;
-  text-align: center !important;
-}
+    /* Update icon styles for mobile */
+  .fab {
+    padding: 10px;
+    font-size: 24px;
+    width: 55px !important;
+  }
+  /* Update GitHub icon style for mobile */
+  .fab.fa-github {
+    padding: 10px;
+    font-size: 24px;
+    width: 55px !important;
+  }
+  .iconz {
+    justify-content: center; 
+    margin: 0; 
+  }
+
   }
 </style>
 

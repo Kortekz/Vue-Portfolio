@@ -128,14 +128,18 @@ export default {
   background-color: #003366;
 }
 
+
 /* Add media queries for responsiveness */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 767px) {
   .card {
     width: calc(100% - 20px);
     margin: 20px;
   }
   .projectImage {
     height: 200px;
+    width: 250px;
+    /* justify-content: center; */
+    margin: auto 0;
   }
   .Description1 {
     font-size: 16px;
@@ -184,14 +188,14 @@ export default {
 /* Additional media query for 300px */
 @media screen and (max-width: 300px) {
   .card {
-    width: calc(100% - 5px);
-    margin: 5px;
+    width: calc(100% - 15px);
+    margin-bottom: 20px;
   }
   .projectImage {
     height: 120px;
   }
   .Description1 {
-    font-size: 12px;
+    font-size: 14px;
     padding-top: 3px;
     padding-bottom: 15px;
   }
