@@ -30,7 +30,7 @@
           <router-link to="/resume" class="nav-link black-text nav-link-underline">Work Experience</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/testimonials" class="nav-link black-text nav-link-underline">Testimonials</router-link>
+          <router-link to="/testimonials" class="nav-link black-text nav-link-underline">Peer Review</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/contact" class="nav-link black-text nav-link-underline">Contact</router-link>
@@ -41,8 +41,19 @@
 </template>
 
 <script>
-export default {
+import Vue from 'vue';
+import Router from 'vue-router';
 
+// Vue.use(Router);
+
+export default {
+  mounted() {
+    this.$router.beforeEach((to, from, next) => {
+      // Close the navbar when navigating to a new route
+      document.querySelector('.navbar-collapse').classList.remove('show');
+      next();
+    });
+  }
 }
 </script>
 
@@ -135,6 +146,11 @@ nav a:hover {
 .navbar-toggler .line:nth-child(3) {
   transform-origin: left center;
 }
+
+.collapse {
+  transition: max-height 0.5s ease-out !important;
+}
+
 @media (max-width: 768px) {
   nav {
     justify-content: center;
@@ -147,6 +163,14 @@ nav a:hover {
   nav li {
     padding: 10px;
   }
+}
+@media (max-width: 400px) {
+  nav a {
+  font-size: 18px !important;
+}
+nav li {
+  font-size: 18px !important;
+}
 }
 
 @keyframes pulseAnimation {

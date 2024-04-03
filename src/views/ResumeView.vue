@@ -42,15 +42,18 @@
             <p class="exp-occupation">{{ workItem.occupation }} : </p>
             <p class="exp-des"> {{ workItem.description }} </p> 
           </div>
-        </div>
-  
-        <!-- Contact Section -->
+
+          <!-- Contact Section -->
         <div class="section-contact">
         <h2 class="downhead">Download My Resume Below!</h2>
           <div class="contact-item">
             <button class="resume-button" @click="downloadResume">Resume</button>
           </div>
         </div>
+
+        </div>
+  
+        
         
         <!-- Skills Section -->
         <div class="section skills">
@@ -61,6 +64,9 @@
               <p class="skill-experience">{{ skillItem.experience }}</p>
             </div>
           </div>
+
+          
+
         </div>
   
       </div>
@@ -123,6 +129,10 @@
   </script>
   
   <style scoped>
+  .downhead{
+    margin: auto 0;
+    margin-top: 50px;
+  }
 .resume-button {
   padding: 15px;
   background-color: #005ae2;
@@ -187,7 +197,7 @@
   
   /* RESUME STYLES */
   .resume {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap; 
@@ -197,7 +207,7 @@
   
   /* SECTION STYLES */
   .section {
-    width: 30%; 
+    width: 50%; 
     margin-bottom: 0px; 
   }
   .edu-item, .exp-item {
@@ -315,7 +325,7 @@
     padding-top: 15px;
   }
   .main-container {
-    max-width: 1350px;
+    max-width: 1500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column; 
@@ -423,8 +433,37 @@
   .skillh2{
     margin-left: 20px;
   }
-  
+  .edu-type, .edu-place, .edu-des, .exp-des, .exp-occupation, .skill-experience, .contact-info {
+    margin: 5px 0;
+    color: white;
+    font-size: 16px;
   }
+  .edu-type{
+    font-weight: 800 !important;
+    color: #3385ff;
+    font-size: 16px;
+  }
+  .exp-occupation{
+    font-weight: 600 !important;
+    color: #3385ff;
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+  h2{
+    font-size: 22px !important;
+  }
+  .skill-experience{
+    font-size: 16px;
+  }
+  .downhead{
+    font-size: 20px !important; 
+    text-align: center;
+    margin: auto 0;
+    margin-top: 20px
+    }
+}
 
   /* responsiveness for 300px */
   @media (max-width: 300px) {
@@ -432,7 +471,7 @@
       width:100%;
     }
     .downhead{
-      margin-left: 30px; 
+      margin-left: 20px; 
     }
     .resume-button {
     margin-right: 40px;
@@ -465,7 +504,35 @@
   .skillh2{
     margin-left: 20px;
   }
-  
+  .edu-type, .edu-place, .edu-des, .exp-des, .exp-occupation, .skill-experience, .contact-info {
+    margin: 5px 0;
+    color: white;
+    font-size: 16px;
+  }
+  .edu-type{
+    font-weight: 800 !important;
+    color: #3385ff;
+    font-size: 16px;
+  }
+  .exp-occupation{
+    font-weight: 600 !important;
+    color: #3385ff;
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+  h2{
+    font-size: 22px !important;
+  }
+  .skill-experience{
+    font-size: 16px;
+  }
+  .downhead{
+    font-size: 20px !important; 
+    text-align: center;
+    margin: auto 0;
+    }
   }
   
   </style>

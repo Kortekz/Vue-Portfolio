@@ -56,9 +56,9 @@
 }
 
 /* Responsiveness for 720px */
-@media (max-width: 720px) {
+@media (max-width: 767px) {
   .fontP {
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -72,7 +72,7 @@
 }
 
 /* Responsiveness for 300px */
-@media (max-width: 300px) {
+@media (max-width: 320px) {
   .fontP {
     font-size: 15px;
     margin-left: 10px;

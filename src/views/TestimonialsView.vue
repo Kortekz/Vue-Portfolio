@@ -91,11 +91,10 @@ export default {
   border-radius: 25px; /* Added border-radius */
 }
 .testimonialImage {
-  width: 350px;
-  height: 350px;
-  object-fit: cover; 
+  width: 100%; /* Use full width of the container */
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+  object-fit: cover; /* Fill the container while maintaining aspect ratio */
   border-radius: 25px; /* Added border-radius */
-  /* images fill the container while maintaining aspect ratio */
 }
 .card-content{
   margin-top: 50px;
@@ -142,27 +141,28 @@ export default {
   padding-bottom: 150px;
 }
 /* Media query for mobile responsiveness */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 767px) {
   .card {
   width: calc(40% - 20px); 
   margin-left: 20px;
   margin-right: 20px;
   }
   .image-container {
-  height: 100px; 
-  margin-bottom: 10px; 
+  height: 300px; 
+  margin-bottom: -60px;
   }
   .testimonialImage {
   max-height: 100%; 
   }
   .card-content {
-  font-size: 14px; 
+  font-size: 12px;
   }
   .card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0; 
-  }
+  width: 230px;
+  height: 300px;
+  margin-bottom: 10px;
+  margin-left: -120px;
+  } 
   .quote{
     font-size: 14px;
   }
@@ -170,7 +170,51 @@ export default {
     font-size: 16px;
   }
 }
-/* Responsiveness for 500px */
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 450px) {
+  .Description {
+  color: white;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.quote {
+  font-style: italic;
+  color: white;
+  margin: auto;
+  font-size: 13px;
+}
+.title {
+  color: #005ae2;
+  margin-top: 30px;
+}
+  .testimonial-container {
+  justify-content: center;
+  }
+  .card {
+  width: calc(80% - 20px); 
+  margin: 20px 0px;
+  }
+  .image-container {
+  height: 200px; 
+  margin-bottom: -60px;
+  }
+  .testimonialImage {
+  max-height: 100%; 
+  }
+  .card-content {
+  font-size: 12px;
+  }
+  .card img {
+  width: 150px;
+  height: 180px;
+  margin-bottom: 10px;
+  margin-left: -100px;
+  } 
+}
+/* Responsiveness for 400px */
 @media screen and (max-width: 400px) {
   .Description {
   color: white;
@@ -208,14 +252,14 @@ export default {
   font-size: 12px;
   }
   .card img {
-  width: 230px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   margin-bottom: 10px;
   margin-left: -100px;
   } 
 }
 /* responsiveness for mobiles on 300px */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
   .testimonial-container {
   justify-content: center;
   }
@@ -232,12 +276,18 @@ export default {
   }
   .card-content {
   font-size: 12px;
+  margin-top: 10px;
   }
   .card img {
   width: 180px;
-  /* height: 300px; */
-  margin-bottom: 10px;
-  margin-left: -170px;
+  height: 180px;
+  margin-bottom: 0px;
+  margin-top: -20px;
+  margin-left: -160px;
   } 
+  .quote{
+    font-size: 14px;
+    width: auto !important;
+  }
 }
 </style>
