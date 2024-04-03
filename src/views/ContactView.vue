@@ -21,13 +21,11 @@
           </div>
         </div>
 
-        <!-- <div class="extra2">
-          <h3>Here are my social media for faster replies!</h3>
-          <div class="icony">
-            <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin"></a>
-            <a href="https://github.com/Kortekz" class="contact-git">GITHUB</a>
-          </div>
-        </div> -->
+        <div class="iconz">
+              <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin" target="_blank"></a>
+              <a href="https://github.com/Kortekz" target="_blank" class="fab fa-github"></a>
+            </div>
+
 
       </div>
 
@@ -98,7 +96,7 @@
 
 <style scoped>
 .contact-message {
-  font-size: 22px;
+  font-size: 25px;
   color: white; 
   margin-bottom: 80px; 
   margin-left: 40px;
@@ -133,20 +131,88 @@
   /* margin-bottom: 10px; */
   /* margin-top: 15px; */
   margin-left: 15px;
-  
 }
-
 i{
   color: #005ae2;
   margin-bottom: 35px;
   /* margin-left: 15px; */
   font-size: 25px;
 }
-
 .icons {
   font-size: 25px !important;
   margin-left: 25px;
 }
+/* ICONS */
+/* Update icon styles */
+.fab {
+  display: inline-block; /* Display icons next to each other */
+  padding: 15px;
+  font-size: 35px !important;
+  width: 65px !important;
+  text-align: center !important;
+  border-radius: 50% !important; /* Make icons circular */
+  /* margin-right: 20px !important; */
+  /* margin-left: 10px; */
+  transition: 0.3s;
+  background: transparent !important; /* Transparent background */
+  border: 2px solid #005ae2; /* Border color */
+  color: white;
+  margin: 0 auto !important;
+}
+
+/* Update GitHub icon style */
+.fab.fa-github {
+  background: transparent; /* Transparent background */
+  border: 2px solid #005ae2; /* Border color */
+  margin-left: 0px !important;
+}
+/* Hover effect for icons */
+.fab:hover {
+  color: white;
+  background-color: #005ae2 !important;
+  opacity: 1.5;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #005ae2;
+}
+/* GitHub icon hover effect */
+.fab.fa-github:hover {
+  background-color: #005ae2;
+  border-color: #005ae2;
+}
+.iconz {
+  display: flex !important;
+  margin-top: 35px;
+  justify-content: flex-start !important; 
+  padding-top: 10px !important;
+  margin-left: -55px !important;
+  margin-right: 20px !important; /* Add margin to separate icons from other content */
+}
+.btns{
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+.contact-git {
+padding: 15px;
+background: #005ae2;
+font-size: 18px;
+color: white;
+font-weight: 500;
+text-decoration: none;
+border-radius: 10px;
+border: none;
+text-decoration: none; 
+transition: 0.5s;
+margin-left: 15px;
+margin-top: px !important;
+}
+.contact-git:hover {
+background-color: transparent;
+border: 2px solid #005ae2;
+transform: scale(1.05); 
+box-shadow: 0 0 20px #005ae2; 
+transition: 0.5s;
+}
+
 .contactH1{
 color: #005ae2;
 padding-top: 20px;
@@ -204,16 +270,7 @@ margin-right: 15px;
 margin-left: 150px !important;
 transition: 0.3s;
 }
-.fa-facebook:hover{
-color: white;
-opacity: 1.5;
-transform: scale(1.05);
-box-shadow: 0 0 20px #3B5998;
-}
-.fa-facebook {
-background: #3B5998;
-color: white;
-}
+
 .fa-linkedin {
   background: #1385b9;
   color: white;
@@ -321,12 +378,12 @@ input[type="tel"],
 input[type="email"],
 textarea {
 width: 100%;
-padding: 10px;
+padding: 8px;
 margin-bottom: 12px;
 border-radius: 5px;
 border: 1px solid #005ae2;
 font-family: 'Poppins', sans-serif;
-font-size: 16px;
+font-size: 14px;
 box-sizing: border-box;
 }
 .sendBtn {
@@ -354,68 +411,64 @@ box-shadow: 0 0 20px #005ae2;
       flex-direction: column;
       align-items: center;
     }
-
     .contact-info {
       width: 100%;
       margin-left: 0;
       text-align: center;
     }
-
     .form-container {
       width: 100%;
       margin-left: 0;
       margin-top: 20px;
     }
-
     .extra {
       justify-content: center;
     }
-
     .icon-and-text {
       margin-left: 0;
     }
   }
 
-  @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .contact-message {
       font-size: 18px;
       margin-left: 20px;
     }
     .contactH1{
     color: #005ae2;
-    margin-left: 30px;
+    margin: 0px;
     }
     .contact-container {
       padding: 10px;
-      margin-left: -200px;
+      margin-left: -220px;
     }
-
     .extra{
       margin-top: -40px;
     }
-
     .contact-info {
       width: 100%;
       margin-left: 0;
       margin-bottom: 30px;
       text-align: center;
     }
-
     .form-container {
       width: 70%;
-      margin-left: 190px !important;
+      margin-left: 200px !important;
       margin-top: 20px;
       margin-bottom: 20px;
     }
-
     .icon-and-text {
       margin-left: 0;
     }
-
     .icons {
       font-size: 18px !important;
       margin-left: 10px;
     }
+    .iconz{
+      margin-bottom: 40px;
+      margin-top: 10px;
+    }
+
   }
 
 @media screen and (max-width: 300px) {
@@ -424,44 +477,48 @@ box-shadow: 0 0 20px #005ae2;
       margin-left: 35px;
       margin-right: 30px;
     }
-   
     .contactH1{
     color: #005ae2;
     margin-left: 45px;
     }
-
     .contact-container {
       padding: 10px;
       margin-left: -180px;
     }
-
     .extra{
       margin-top: -40px;
     }
-
     .contact-info {
       width: 100%;
       margin-left: 0;
       margin-bottom: 30px;
       text-align: center;
     }
-
     .form-container {
       width: 70%;
       margin-left: 180px !important;
       /* margin-top: 20px; */
       /* margin-bottom: 20px; */
     }
-
     .icon-and-text {
       margin-left: 0;
       /* font-size: 15px !important; */
     }
-
     .icons {
       font-size: 18px !important;
       margin-left: 10px;
     }
+    .iconz{
+      margin-bottom: 40px;
+      margin-top: 10px;
+    }
+        /* Update icon styles */
+.fab {
+  padding: 12px;
+  font-size: 30px !important;
+  width: 60px !important;
+  text-align: center !important;
+}
   }
 </style>
 

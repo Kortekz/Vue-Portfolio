@@ -129,50 +129,78 @@ export default {
 }
 
 /* Add media queries for responsiveness */
-@media screen and (max-width: 768px) {
-.card {
-  width: calc(100% - 20px); 
-  margin: 20px;
+@media screen and (max-width: 720px) {
+  .card {
+    width: calc(100% - 20px);
+    margin: 20px;
   }
-.projectImage {
-  height: 200px;
+  .projectImage {
+    height: 200px;
   }
-.Description1 {
-  font-size: 16px; 
-  padding-top: 10px;
-  padding-bottom: 30px;
+  .Description1 {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 30px;
   }
-.name {
-  font-size: 18px; 
+  .name {
+    font-size: 18px;
   }
-.description {
-  font-size: 16px;
+  .description {
+    font-size: 16px;
   }
-.project-container{
-  margin-left: 25px;
-  margin-right: 25px;
+  .project-container {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    width: calc(100% - 10px);
+    margin: 10px;
+  }
+  .projectImage {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+  }
+  .Description1 {
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin: 25px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .link{
+    font-size: 16px;
   }
 }
 
 /* Additional media query for 300px */
 @media screen and (max-width: 300px) {
-.card {
-  width: calc(100% - 10px); 
-  margin: 10px;
+  .card {
+    width: calc(100% - 5px);
+    margin: 5px;
   }
-.projectImage {
-  height: 150px; 
+  .projectImage {
+    height: 120px;
   }
-.Description1 {
-  font-size: 14px;
-  padding-top: 5px;
-  padding-bottom: 20px;
+  .Description1 {
+    font-size: 12px;
+    padding-top: 3px;
+    padding-bottom: 15px;
   }
-.name {
-  font-size: 16px;
+  .name {
+    font-size: 14px;
   }
-.description {
-  font-size: 14px; 
+  .description {
+    font-size: 12px;
   }
 }
+
 </style>

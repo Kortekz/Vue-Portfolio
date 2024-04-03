@@ -14,16 +14,14 @@
 
           <div class="buttons">
             <h2 class="homeCo">
-              Connect With Me!
+              <!-- Connect With Me! -->
             </h2>
             
             <div class="iconz">
               <a href="https://www.linkedin.com/in/corn%C3%A9-balie/" class="fab fa-linkedin" target="_blank"></a>
-
-              <a href="https://github.com/Kortekz" target="_blank">
-                      <button class="contact-git" >GITHUB</button>
-                  </a>
+              <a href="https://github.com/Kortekz" target="_blank" class="fab fa-github"></a>
             </div>
+
 
             <!-- <div class="btns">
                 <a href="https://github.com/Kortekz">
@@ -136,56 +134,49 @@ export default {
   overflow: hidden;
 }
 /* ICONS */
+/* Update icon styles */
 .fab {
-padding: 15px;
-padding-left: 14px;
-font-size: 25px;
-width: 55px;
-text-align: center;
-text-decoration: none;
-border-radius: 10px;
-margin-right: 10px;
-margin-left: 10px;
-transition: 0.3s;
-padding-bottom: 20px;
-padding-top: 13px;
+  padding: 15px;
+  font-size: 35px;
+  width: 68px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%; /* Make icons circular */
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: 0.3s;
+  background: transparent; /* Transparent background */
+  border: 2px solid #005ae2; /* Border color */
+  color: white;
 }
-.fa-facebook:hover{
-color: white;
-opacity: 1.5;
-transform: scale(1.1);
-box-shadow: 0 0 20px #3B5998;
+
+/* Update GitHub icon style */
+.fab.fa-github {
+  background: transparent; /* Transparent background */
+  border: 2px solid #005ae2; /* Border color */
 }
-.fa-facebook {
-background: #3B5998;
-color: white;
+
+/* Hover effect for icons */
+.fab:hover {
+  color: white;
+  background-color: #005ae2;
+  opacity: 1.5;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #005ae2;
 }
-.fa-linkedin {
-background: #1385b9;
-color: white;
-/* padding-top: px; */
-font-size: 25px;
+
+/* GitHub icon hover effect */
+.fab.fa-github:hover {
+  background-color: #005ae2;
+  border-color: #005ae2;
 }
-.fa-linkedin:hover{
-color: white;
-opacity: 1.5;
-transform: scale(1.1);
-box-shadow: 0 0 20px #1385b9;
-}
-.fa-instagram {
-background: rgb(172, 0, 149);
-color: white;
-}
-.fa-instagram:hover{
-color: white;
-opacity: 1.5;
-transform: scale(1.1);
-box-shadow: 0 0 20px rgb(172, 0, 149);
-}
-.iconz{
-padding-top: 10px;
-margin-left: -10px;
-justify-content: flex-end;
+
+.iconz {
+  display: flex;
+  justify-content: flex-start; 
+  padding-top: 10px;
+  margin-left: -10px;
+  margin-right: 20px; /* Add margin to separate icons from other content */
 }
 .btns{
   padding-top: 30px;
@@ -218,38 +209,51 @@ transition: 0.5s;
   .container {
     width: 90%; 
   }
-
   .content-wrapper {
     flex-direction: column;
     align-items: center;
   }
-
   .Me {
     max-width: 90%; 
     margin-left: 0; 
   }
-
   .content {
     text-align: center; 
     padding-right: 0; 
   }
-
   .name {
     font-size: 35px; 
   }
-
   .homeCo {
     font-size: 30px; 
   }
-
   .title {
     font-size: 30px; 
   }
-
   .HomeP {
     font-size: 20px; 
     margin-right: 0;
   }
+   /* Update icon styles for mobile */
+   .fab {
+    padding: 12px;
+    font-size: 30px;
+    width: 50px;
+  }
+  /* Update GitHub icon style for mobile */
+  .fab.fa-github {
+    padding: 12px;
+    font-size: 30px;
+    width: 50px;
+  }
+  .iconz {
+  display: flex;
+  /* justify-content: flex-start;  */
+  margin: auto 0;
+  margin-left: 95px;
+  margin-top: -20px;
+}
+
 }
 
 /* Media query for 400px */
@@ -286,6 +290,25 @@ transition: 0.5s;
     font-size: 20px; 
     margin-right: 0; 
   }
+   /* Update icon styles for mobile */
+   .fab {
+    padding: 12px;
+    font-size: 30px;
+    width: 58px;
+  }
+  /* Update GitHub icon style for mobile */
+  .fab.fa-github {
+    padding: 12px;
+    font-size: 30px;
+    width: 58px;
+  }
+  .iconz {
+  display: flex;
+  /* justify-content: flex-start;  */
+  margin: auto 0;
+  margin-left: 100px;
+  margin-top: -20px;
+}
 }
 /* Media query for 300px */
 @media (max-width: 300px) {
@@ -314,15 +337,32 @@ transition: 0.5s;
   .homeCo {
     font-size: 25px; 
   }
-
   .title {
     font-size: 25px; 
   }
-
   .HomeP {
     font-size: 18px; 
     margin-right: 0;
   }
+  /* Update icon styles for mobile */
+  .fab {
+    padding: 10px;
+    font-size: 28px;
+    width: 50px;
+  }
+  /* Update GitHub icon style for mobile */
+  .fab.fa-github {
+    padding: 10px;
+    font-size: 28px;
+    width: 50px;
+  }
+  .iconz {
+  display: flex;
+  /* justify-content: flex-start;  */
+  margin: auto 0;
+  margin-left: 60px;
+  margin-top: -20px;
+}
 }
 
 
