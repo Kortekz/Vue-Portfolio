@@ -91,16 +91,16 @@
 /* Define the animation for the border and box shadow */
 @keyframes borderAndBoxShadowAnimation {
   0% {
-    border-color: rgb(79, 78, 78);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px white;
   }
-  50% {
-    border-color: #00c3ff;
-    box-shadow: 0 0 20px #00c3ff;
+50% {
+  border-color: #005ae2;
+  box-shadow: 0 0 20px #005ae2;
   }
-  100% {
-    border-color: rgb(79, 78, 78);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+100% {
+  border-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px white;
   }
 }
 </style>
