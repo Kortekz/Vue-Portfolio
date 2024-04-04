@@ -43,18 +43,19 @@
             <p class="exp-des"> {{ workItem.description }} </p> 
           </div>
 
+        
+
+        </div>
+  
+        
           <!-- Contact Section -->
-        <div class="section-contact">
+          <div class="section-contact">
         <h2 class="downhead">Download My Resume Below!</h2>
           <div class="contact-item">
             <button class="resume-button" @click="downloadResume">Resume</button>
           </div>
         </div>
 
-        </div>
-  
-        
-        
         <!-- Skills Section -->
         <div class="section skills">
           <h2 class="skillh2">Skills</h2>
@@ -131,7 +132,7 @@
   <style scoped>
   .downhead{
     margin: auto 0;
-    margin-top: 50px;
+    margin-top: 10px;
   }
 .resume-button {
   padding: 15px;
@@ -189,7 +190,7 @@
   }
   .circle img {
     width: 240px; 
-    height: 310px;
+    height: 240px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
@@ -334,6 +335,13 @@
     /* margin-left: 35px;
     margin-right: 35px; */
   }
+  .section-contact {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
   
   /* Responsive adjustments */
   @media (max-width: 786px) {

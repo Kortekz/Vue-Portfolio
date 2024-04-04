@@ -77,8 +77,9 @@ export default {
   justify-content: center; 
   align-items: center; 
   flex-wrap: wrap;
-  padding: 20px;
-  width: 80%; 
+  margin-top: 0px !important;
+  padding: 40px;
+  width: 100%; 
   margin: 50px auto; /* Center the container and add a fixed top margin */
 }
 .content-wrapper {
@@ -94,17 +95,20 @@ export default {
   animation: borderAnimation 2s infinite; 
   border-radius: 5px;
   overflow: hidden;
-  margin-bottom: 40px;
+  /* margin-bottom: 20px; */
 }
 .content {
   flex: 1;
-  text-align: left;
-  padding-right: 20px; /* Adjust spacing between content and image */
-  padding-top: 20px;
+  /* text-align: left; */
+  /* padding-right: 20px; */
+  margin-top: 70px;
 }
 .name{
   color: #005ae2;
   font-size: 45px;
+  text-align: center;
+  justify-content: center;
+  margin: auto 0;
 } 
 .homeCo{
   color: #005ae2;
@@ -121,10 +125,10 @@ export default {
   color: white;
   padding-top: 20px;
   font-size: 25px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 .Me {
-  max-width: 75%; 
+  max-width: 70%; 
   height: auto;
   border: 4px solid rgb(79, 78, 78);
   border-radius: 20px;
@@ -173,8 +177,8 @@ export default {
 
 .iconz {
   display: flex;
-  justify-content: flex-start; 
-  padding-top: 10px;
+  justify-content:center; 
+  /* padding-top: 10px; */
   margin-left: -10px;
   margin-right: 20px; /* Add margin to separate icons from other content */
 }
@@ -412,16 +416,16 @@ transition: 0.5s;
 /* Define the animation for the border and box shadow */
 @keyframes borderAndBoxShadowAnimation {
 0% {
-  border-color: rgb(79, 78, 78);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px white;
   }
 50% {
-  border-color: #00c3ff;
-  box-shadow: 0 0 20px #00c3ff;
+  border-color: #005ae2;
+  box-shadow: 0 0 20px #005ae2;
   }
 100% {
-  border-color: rgb(79, 78, 78);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  border-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px white;
   }
 }
 
