@@ -383,6 +383,8 @@ transition: 0.5s;
   }
   .name {
     font-size: 30px; 
+    margin-top: 20px;
+    margin-bottom: -20px;
   }
   .homeCo {
     font-size: 25px; 
