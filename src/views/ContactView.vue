@@ -183,9 +183,9 @@ i{
   display: flex !important;
   margin-top: 35px;
   justify-content: flex-start !important; 
-  padding-top: 10px !important;
-  margin-left: -55px !important;
-  margin-right: 20px !important; /* Add margin to separate icons from other content */
+  /* padding-top: 10px !important; */
+  margin-left: -40px !important;
+  margin-right: 60px !important; /* Add margin to separate icons from other content */
 }
 .btns{
   padding-top: 30px;

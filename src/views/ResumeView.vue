@@ -471,6 +471,14 @@
     margin: auto 0;
     margin-top: 20px
     }
+    .circle {
+    width: 160px; 
+    height: 160px;
+  }
+  .circle img {
+    width: 160px; 
+    height: 160px;
+  }
 }
 
   /* responsiveness for 300px */
@@ -541,6 +549,14 @@
     text-align: center;
     margin: auto 0;
     }
+  .circle {
+    width: 160px; 
+    height: 160px;
+  }
+  .circle img {
+    width: 160px; 
+    height: 160px;
+  }
   }
   
   </style>
