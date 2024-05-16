@@ -6,7 +6,7 @@
   <div>
   
     <!-- putting all if's in one dive to make it easier to display the spinner -->
-    <div v-if="education && education.length && workExperience && workExperience.length && skills && skills.length> 0" >
+    <div v-if="education && education.length && workExperience && workExperience.length && skills && skills.length && badges && badges.length> 0" >
       
     
   <!-- Banner Section -->
@@ -66,14 +66,22 @@
             </div>
           </div>
 
-          
-
+          <h2 class="skillh2">Badges</h2>
+          <p class="skill-experience">Below you can find my achieved Badges</p>
+          <!-- BADGES SECTION -->
+          <div class="badges-container">
+          <div v-for="badge in badges" :key="badge.title" class="badge-card">
+            <img :src="badge.image" :alt="badge.title" class="badge-image" />
+            <h3>{{ badge.title }}</h3>
+            <p>{{ badge.description }}</p>
+          </div>
         </div>
-  
+
+
+
+          </div>
+        </div>
       </div>
-  
-      </div>
-  
     </div>
   
     <div v-else class="spinny">
@@ -96,6 +104,9 @@
       skills() {
         return this.$store.state.skills;
       },
+      badges() {
+        return this.$store.state.badges
+      },
       workExperience() {
         return this.$store.state.workExperience;
       },
@@ -113,6 +124,7 @@
       this.$store.dispatch('fetchWorkExperience');
       this.$store.dispatch('fetchContact');
       this.$store.dispatch('fetchImage');
+      this.$store.dispatch('fetchBadges')
     },
     methods: {
       downloadResume() {
@@ -130,10 +142,49 @@
   </script>
   
   <style scoped>
-  .downhead{
-    margin: auto 0;
-    margin-top: 10px;
-  }
+
+/* badges */
+.badges-container {
+  display: flex;
+  flex-wrap: wrap; /* Optional: Allows cards to wrap onto the next line if there isn't enough space */
+  justify-content: space-between; /* Optional: Adds space between the cards */
+}
+
+.badge-card {
+  max-width: 350px; /* Smaller width for tighter grouping */
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #007bff; /* Lighter shade of blue */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.badge-card:hover {
+  transform: scale(1.05);
+}
+
+.badge-card img.badge-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.badge-card h3,.badge-card p {
+  text-align: center;
+  color: white; /* Ensures text contrasts well against the background */
+}
+
+
+.downhead{
+  margin: auto 0;
+  margin-top: 10px;
+}
 .resume-button {
   padding: 15px;
   background-color: #005ae2;
