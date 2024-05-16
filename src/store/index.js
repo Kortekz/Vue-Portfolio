@@ -11,7 +11,8 @@ export default createStore({
     workExperience: [],
     image:[],
     contact:[],
-    download:[]
+    download:[],
+    badges: [] 
   },
   getters: {
   },
@@ -43,8 +44,21 @@ export default createStore({
     setCDownload(state, value) { 
       state.download = value 
     },
+    setBadges(state, value) { 
+      state.badges = value 
+    },
   },
   actions: {
+    
+    async fetchBadges(context) {
+      try {
+        let res = await fetch(dataAPI);
+        let { badges } = await res.json();
+        context.commit('setBadges', badges);
+      } catch (error) {
+        console.error('Error fetching Badges data:', error);
+      }
+    },
     // Getting home data
     async fetchHome(context) {
       try {
@@ -125,6 +139,9 @@ export default createStore({
         console.error('Error fetching Work contact data:', error);
       }
     },
+
+    
+
     // getting download data, for the resume
     async fetchDownload(context) {
       try {
@@ -135,5 +152,7 @@ export default createStore({
         console.error('Error fetching Work download data:', error);
       }
     },
+   
   },
+  
 })
