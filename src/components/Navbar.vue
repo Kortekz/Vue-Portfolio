@@ -32,12 +32,15 @@
         <li class="nav-item">
           <router-link to="/testimonials" class="nav-link black-text nav-link-underline">Peer Review</router-link>
         </li>
-        <li class="nav-item">
-          <router-link to="/contact" class="nav-link black-text nav-link-underline">Contact</router-link>
-        </li>
+        <button class="contactBtn">
+        <router-link to="/contact" class="routerCont">Contact</router-link>
+    </button>
+       
       </ul>
     </div>
+    
   </nav>
+  
 </template>
 
 <script>
@@ -62,7 +65,6 @@ export default {
 template {
   font-family: 'Gantari', sans-serif; 
 }
-
 nav {
  display: flex;
  justify-content: flex-end;
@@ -150,6 +152,27 @@ nav a:hover {
 .collapse {
   transition: max-height 0.5s ease-out !important;
 }
+
+
+
+.routerCont{
+  color: #ffffff;
+}
+/* Additional styles for the Contact button */
+.contactBtn {
+  background-color: transparent;
+  text-decoration: none !important;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  margin-right: 30px;
+  padding: 12px;
+}
+
+/* Ensure the button itself has the correct styling */
+.contactBtn:hover {
+  color: white; /* Darker shade for hover effect */
+}
+
 
 @media (max-width: 768px) {
   nav {

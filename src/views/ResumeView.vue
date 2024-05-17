@@ -21,7 +21,14 @@
   
     <div class="main-container">
   
-  
+  <!-- Contact Section -->
+  <div class="section-contact">
+        <h2 class="downhead">Download My Resume Below!</h2>
+          <div class="contact-item">
+            <button class="resume-button" @click="downloadResume">Resume</button>
+          </div>
+        </div>
+
       <div class="resume">
         <!-- Education Section -->
         <div class="section edu">
@@ -43,17 +50,6 @@
             <p class="exp-des"> {{ workItem.description }} </p> 
           </div>
 
-        
-
-        </div>
-  
-        
-          <!-- Contact Section -->
-          <div class="section-contact">
-        <h2 class="downhead">Download My Resume Below!</h2>
-          <div class="contact-item">
-            <button class="resume-button" @click="downloadResume">Resume</button>
-          </div>
         </div>
 
         <!-- Skills Section -->
@@ -66,8 +62,8 @@
             </div>
           </div>
 
-          <h2 class="skillh2">Badges</h2>
-          <p class="skill-experience">Below you can find my achieved Badges</p>
+          <h2 class="badges">Badges</h2>
+          <p class="badgehead">Below you can find my achieved Badges</p>
           <!-- BADGES SECTION -->
           <div class="badges-container">
           <div v-for="badge in badges" :key="badge.title" class="badge-card">
@@ -77,6 +73,7 @@
           </div>
         </div>
 
+        
 
 
           </div>
@@ -146,19 +143,28 @@
 /* badges */
 .badges-container {
   display: flex;
-  flex-wrap: wrap; /* Optional: Allows cards to wrap onto the next line if there isn't enough space */
-  justify-content: space-between; /* Optional: Adds space between the cards */
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
-
+.badges{
+font-size: 24px;
+margin-top: -20px;
+}
+.badgehead{
+color: white;
+font-size: 20px;
+margin-bottom: 50px;
+}
 .badge-card {
   max-width: 350px; /* Smaller width for tighter grouping */
-  margin: 20px auto;
+  margin: 10px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #007bff; /* Lighter shade of blue */
+  background-color: #005ae2; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
@@ -183,7 +189,7 @@
 
 .downhead{
   margin: auto 0;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .resume-button {
   padding: 15px;
@@ -296,13 +302,13 @@
     color: white;
     text-align: center;
     font-size: 16px;
-    background-color: #333;
+    background-color: #005ae2;
     margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); */
     transition: 0.3s;
   }
   .skill-card:hover {
-    box-shadow: 0 0 20px rgba(0, 90, 226, 0.8);
+    /* box-shadow: 0 0 20px rgba(0, 90, 226, 0.8); */
     transition: 0.5s;
     transform: scale(1.05);
   }
@@ -450,6 +456,13 @@
   h2{
     margin-right: 0px;
   }
+  .badges-container {
+    flex-direction: column; /* Stack badges vertically on small screens */
+  }
+ .badge-card {
+    max-width: 80%; /* Full width on small screens */
+    margin: 10px auto;
+  }
   
   }
   
@@ -529,6 +542,9 @@
   .circle img {
     width: 160px; 
     height: 160px;
+  }
+  .badge-card {
+    padding: 10px; /* Reduce padding for smaller screens */
   }
 }
 
