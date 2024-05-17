@@ -216,48 +216,52 @@ export default {
 }
 /* Responsiveness for 400px */
 @media screen and (max-width: 400px) {
-  .Description {
-  color: white;
-  font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.quote {
-  font-style: italic;
-  color: white;
-  margin: auto;
-  font-size: 13px;
-}
-.title {
-  color: #005ae2;
-  margin-top: 30px;
-}
-  .testimonial-container {
-  justify-content: center;
+ .Description {
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
-  .card {
-  width: calc(80% - 20px); 
-  margin: 20px 0px;
+ .quote {
+    font-style: italic;
+    color: white;
+    margin: auto;
+    font-size: 13px;
   }
-  .image-container {
-  height: 300px; 
-  margin-bottom: -60px;
+ .title {
+    color: #005ae2;
+    margin-top: 30px;
   }
-  .testimonialImage {
-  max-height: 100%; 
+ .testimonial-container {
+    justify-content: center;
   }
-  .card-content {
-  font-size: 12px;
+ .card {
+    width: calc(80% - 20px);
+    margin: 20px 0px;
   }
-  .card img {
-  width: 250px;
-  height: 250px;
-  margin-bottom: 10px;
-  margin-left: -100px;
+ .image-container {
+    height: 300px;
+    margin-bottom: -60px;
+  }
+ .testimonialImage {
+    max-height: 100%;
+    display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+ .card-content {
+    font-size: 12px;
+  }
+ .card img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+    margin-left: -20px !important;
+   
   } 
 }
+
 /* responsiveness for mobiles on 300px */
 @media screen and (max-width: 320px) {
   .testimonial-container {

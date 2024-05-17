@@ -14,35 +14,59 @@
     </p>
 
     <h2 class="hobbiesTitle">Hobbies</h2>
-    <h3 class="secondHob">Below are some of my Hobbies</h3>
+<h3 class="secondHob">Below are some of my Hobbies</h3>
 
-    <div class="cards-container">
-      <div class="card">
-        <div class="card-content">
-          <h3 class="head">Coding personal projects</h3>
-          <p class="hobbyP">I like Building web applications and experimenting with new technologies/Frameworks.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <h3 class="head">Exploring Web Development</h3>
-          <p class="hobbyP">Staying updated with the latest trends in web development and trying out new frameworks.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <h3 class="head">Watching Series & Gaming</h3>
-          <p class="hobbyP">I like to Relax and unwind by playing games or catching up on Tv Shows/Movies. 
-            My favorite gaming genres are RPGs, FPS & strategy games.</p>
-        </div>
-      </div>
+<div class="cards-container">
+  <div class="card">
+    <div class="card-content">
+      <h3 class="head">Coding personal projects</h3>
+      <img src="https://i.imgur.com/F0RTpsq.jpg" alt="Coding Personal Projects">
+      <p class="hobbyP">I like Building web applications and experimenting with new technologies/Frameworks.</p>
     </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <h3 class="head">Exploring Web Development</h3>
+      <img src="https://i.imgur.com/q8FIXXv.jpg" alt="Exploring Web Development">
+      <p class="hobbyP">Staying updated with the latest trends in web development and trying out new frameworks.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <h3 class="head">Watching Series & Gaming</h3>
+      <img src="https://i.imgur.com/FmxBB9W.jpg" alt="Watching Series & Gaming">
+      <p class="hobbyP">I like to Relax and unwind by playing games or catching up on Tv Shows/Movies. 
+        My favorite gaming genres are RPGs, FPS & strategy games.</p>
+    </div>
+  </div>
+</div>
+
+    
   </div>
 </template>
 
 <style>
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* .card {
+  flex: 1 0 21%; 
+  margin: 10px;
+} */
+
+.card img {
+  max-width: 100%;
+  height: 250px !important;
+  object-fit: cover; 
+  margin-bottom: 30px !important; 
+  margin-top: 10px !important; 
+  border-radius: 30px;
+}
 .about {
   margin-left: 40px;
   margin-right: 40px;
@@ -111,7 +135,7 @@
   margin-bottom: 0px;
 }
 .head{
-  color: #005ae2;
+  color: white;
   margin-bottom: 20px !important;
   margin-top: -30px;
 }
@@ -123,15 +147,20 @@
     margin-left: 20px;
     margin-right: 20px;
   }
-
   .card {
     width: calc(50% - 20px); /* Adjust width for two cards in a row */
+  }
+  .card img {
+   margin-left: 0px !important;
   }
 }
 
 @media (max-width: 480px) {
   .card {
     width: calc(100% - 20px); /* Adjust width for single card in a row */
+  }
+  .card img {
+   margin-left: 0px !important;
   }
 }
 </style>
