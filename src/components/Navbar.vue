@@ -186,6 +186,13 @@ nav a:hover {
   nav li {
     padding: 10px;
   }
+  /* Adjust the Contact button for mobile */
+  .contactBtn {
+    display: block; 
+    width: 50%; 
+    text-align: center; 
+    margin: 10px auto; 
+  }
 }
 @media (max-width: 400px) {
   nav a {
