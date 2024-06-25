@@ -125,7 +125,7 @@
     },
     methods: {
       downloadResume() {
-      const resumeUrl = 'https://drive.google.com/file/d/1IT9DQJvEQQKEeDhUpkU36EQfpkHSfrxc/view?usp=sharing';
+      const resumeUrl = 'https://drive.google.com/file/d/18kHPBk85k8Xxsj0kHxuAOB-fbae6lLhx/view?usp=sharing';
       const link = document.createElement('a');
       link.href = resumeUrl;
       link.download = 'CornéResume.pdf';
